@@ -1,0 +1,102 @@
+/*==================================
+            INPUT
+==================================*/
+
+.input-group {
+    margin-bottom: 22px;
+}
+
+.input-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.input-label span {
+    color: #ef4444;
+    margin-left: 4px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-left-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    color: #94a3b8;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+.input-wrapper input {
+    width: 100%;
+    height: 52px;
+    border: 1px solid #dbe3ea;
+    border-radius: 12px;
+    padding: 0 48px 0 46px;
+    font-size: 15px;
+    outline: none;
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.input-wrapper input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.input-wrapper input:disabled {
+    background: #f8fafc;
+    cursor: not-allowed;
+    opacity: 0.75;
+}
+
+.input-right-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #94a3b8;
+    font-size: 18px;
+    transition: color 0.2s ease;
+}
+
+.input-right-icon:hover {
+    color: #2563eb;
+}
+
+.input-right-icon:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.input-error input {
+    border-color: #ef4444;
+}
+
+.input-error input:focus {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
+}
+
+.input-error-text {
+    display: block;
+    margin-top: 6px;
+    color: #ef4444;
+    font-size: 13px;
+}

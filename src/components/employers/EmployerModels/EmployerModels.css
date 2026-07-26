@@ -1,0 +1,198 @@
+/*==================================
+        EMPLOYER MODELS
+==================================*/
+
+.employer-models{
+    padding:100px 0;
+    background:#ffffff;
+}
+
+.employer-models-badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:8px 18px;
+    border-radius:30px;
+    background:#eaf2ff;
+    color:#2563eb;
+    font-size:13px;
+    font-weight:600;
+    text-transform:uppercase;
+    margin:0 auto 18px;
+}
+
+.employer-models .container{
+    text-align:center;
+}
+
+.employer-models-title{
+    font-size:46px;
+    font-weight:700;
+    color:#0f172a;
+    margin-bottom:18px;
+}
+
+.employer-models-description{
+    max-width:760px;
+    margin:0 auto 60px;
+    color:#64748b;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/*==================================
+        GRID
+==================================*/
+
+.employer-models-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+/*==================================
+        CARD
+==================================*/
+
+.employer-model-card{
+    position:relative;
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:22px;
+    padding:42px 35px;
+    text-align:left;
+    transition:.35s ease;
+    overflow:hidden;
+}
+
+.employer-model-card:hover{
+    transform:translateY(-8px);
+    border-color:#2563eb;
+    box-shadow:0 20px 50px rgba(37,99,235,.10);
+}
+
+.employer-model-card.featured{
+    border:2px solid #2563eb;
+}
+
+/*==================================
+        BADGE
+==================================*/
+
+.model-badge{
+    position:absolute;
+    top:20px;
+    right:20px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:6px 14px;
+    border-radius:30px;
+    background:#2563eb;
+    color:#fff;
+    font-size:12px;
+    font-weight:600;
+}
+
+.employer-model-card:not(.featured) .model-badge{
+    background:#7c3aed;
+}
+
+/*==================================
+        CONTENT
+==================================*/
+
+.employer-model-card h3{
+    font-size:30px;
+    color:#0f172a;
+    margin:30px 0 18px;
+}
+
+.employer-model-card p{
+    color:#64748b;
+    line-height:1.8;
+    font-size:16px;
+    margin-bottom:35px;
+    min-height:90px;
+}
+
+.employer-model-card a{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    text-decoration:none;
+    color:#2563eb;
+    font-weight:600;
+    transition:.3s;
+}
+
+.employer-model-card a:hover{
+    gap:14px;
+}
+
+/*==================================
+        RESPONSIVE
+==================================*/
+
+@media(max-width:1100px){
+
+.employer-models-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.employer-models{
+    padding:80px 0;
+}
+
+.employer-models-title{
+    font-size:34px;
+}
+
+.employer-models-description{
+    font-size:16px;
+    margin-bottom:45px;
+}
+
+.employer-models-grid{
+    grid-template-columns:1fr;
+}
+
+.employer-model-card{
+    padding:30px 24px;
+}
+
+.employer-model-card h3{
+    font-size:26px;
+    margin-top:20px;
+}
+
+.employer-model-card p{
+    min-height:auto;
+}
+
+.model-badge{
+    position:static;
+    margin-bottom:15px;
+}
+
+}
+
+@media(max-width:480px){
+
+.employer-models-title{
+    font-size:28px;
+}
+
+.employer-model-card h3{
+    font-size:22px;
+}
+
+.employer-model-card p{
+    font-size:15px;
+}
+
+}

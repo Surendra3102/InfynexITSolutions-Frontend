@@ -1,0 +1,111 @@
+/*====================================
+          ABOUT CTA
+====================================*/
+
+.about-cta{
+    padding:120px 0;
+    background:linear-gradient(135deg,#0B2E83,#2563EB);
+    position:relative;
+    overflow:hidden;
+}
+
+.about-cta::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);
+    background-size:30px 30px;
+}
+
+.about-cta-content{
+    position:relative;
+    z-index:2;
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+    color:#fff;
+}
+
+.about-cta-content .section-badge{
+    background:rgba(255,255,255,.15);
+    color:#fff;
+}
+
+.about-cta-content h2{
+    font-size:56px;
+    line-height:1.2;
+    margin:25px 0;
+}
+
+.about-cta-content p{
+    font-size:18px;
+    line-height:1.9;
+    color:rgba(255,255,255,.9);
+    margin-bottom:45px;
+}
+
+.about-cta-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.primary-btn,
+.secondary-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:16px 34px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.35s;
+}
+
+.primary-btn{
+    background:#fff;
+    color:#2563EB;
+}
+
+.primary-btn:hover{
+    transform:translateY(-5px);
+}
+
+.secondary-btn{
+    border:2px solid rgba(255,255,255,.35);
+    color:#fff;
+}
+
+.secondary-btn:hover{
+    background:#fff;
+    color:#2563EB;
+}
+
+@media(max-width:768px){
+
+.about-cta{
+    padding:80px 0;
+}
+
+.about-cta-content h2{
+    font-size:36px;
+}
+
+.about-cta-content p{
+    font-size:16px;
+}
+
+.about-cta-buttons{
+    flex-direction:column;
+    align-items:center;
+}
+
+.primary-btn,
+.secondary-btn{
+    width:240px;
+    justify-content:center;
+}
+
+}

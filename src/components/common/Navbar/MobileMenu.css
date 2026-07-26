@@ -1,0 +1,264 @@
+/* ==========================
+   Overlay
+========================== */
+
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.35s ease;
+  z-index: 999;
+}
+
+.mobile-overlay-show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ==========================
+   Drawer
+========================== */
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -340px;
+
+  width: 320px;
+  max-width: 85%;
+  height: 100vh;
+
+  background: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: right 0.35s ease;
+
+  z-index: 1000;
+
+  box-shadow: -8px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-menu-open {
+  right: 0;
+}
+
+/* ==========================
+   Header
+========================== */
+
+.mobile-menu-header {
+  height: 72px;
+
+  padding: 0 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.mobile-menu-header h3 {
+  font-size: 20px;
+  color: #111827;
+  font-weight: 600;
+}
+
+.mobile-menu-header button {
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #f3f4f6;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.mobile-menu-header button:hover {
+  background: #e5e7eb;
+}
+
+/* ==========================
+   Navigation
+========================== */
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+}
+
+.mobile-menu-links a {
+  padding: 14px 0;
+
+  text-decoration: none;
+
+  color: #374151;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  border-bottom: 1px solid #f3f4f6;
+
+  transition: 0.25s;
+}
+
+.mobile-menu-links a:hover,
+.mobile-menu-links a.active {
+  color: #2563eb;
+  padding-left: 10px;
+}
+
+/* ==========================
+   Footer
+========================== */
+
+.mobile-menu-footer {
+  margin-top: auto;
+
+  padding: 20px;
+
+  border-top: 1px solid #e5e7eb;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+.mobile-hire-btn {
+  text-decoration: none;
+
+  background: #2563eb;
+
+  color: #fff;
+
+  text-align: center;
+
+  padding: 13px;
+
+  border-radius: 8px;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.mobile-hire-btn:hover {
+  background: #1d4ed8;
+}
+
+.mobile-login-btn {
+  text-decoration: none;
+
+  border: 1px solid #2563eb;
+
+  color: #2563eb;
+
+  text-align: center;
+
+  padding: 13px;
+
+  border-radius: 8px;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.mobile-login-btn:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* ==========================
+   User Info
+========================== */
+
+.mobile-user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mobile-user-info svg {
+  font-size: 38px;
+  color: #2563eb;
+}
+
+.mobile-user-info div {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-user-info strong {
+  color: #111827;
+  font-size: 15px;
+}
+
+.mobile-user-info small {
+  color: #6b7280;
+  font-size: 13px;
+  word-break: break-word;
+}
+
+/* ==========================
+   Logout
+========================== */
+
+.mobile-logout-btn {
+  padding: 13px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #ef4444;
+
+  color: white;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.mobile-logout-btn:hover {
+  background: #dc2626;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (min-width: 993px) {
+  .mobile-menu,
+  .mobile-overlay {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .mobile-menu {
+    width: 100%;
+    max-width: 100%;
+  }
+}

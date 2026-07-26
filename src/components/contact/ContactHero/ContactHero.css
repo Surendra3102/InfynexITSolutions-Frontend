@@ -1,0 +1,127 @@
+/*==================================
+        CONTACT HERO
+==================================*/
+
+.contact-hero{
+    padding:170px 0 110px;
+    background:linear-gradient(135deg,#0f172a,#2563eb);
+    color:#fff;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.contact-hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);
+    background-size:26px 26px;
+}
+
+.contact-hero .container{
+    position:relative;
+    z-index:2;
+}
+
+.contact-badge{
+    display:inline-block;
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.15);
+    padding:8px 20px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:22px;
+}
+
+.contact-hero h1{
+    font-size:64px;
+    font-weight:700;
+    line-height:1.15;
+    margin-bottom:24px;
+}
+
+.contact-hero h1 span{
+    color:#60a5fa;
+}
+
+.contact-hero p{
+    max-width:720px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.8;
+    color:rgba(255,255,255,.85);
+}
+
+.contact-hero-buttons{
+    margin-top:45px;
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.contact-hero-buttons a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    text-decoration:none;
+    padding:15px 34px;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.contact-primary-btn{
+    background:#fff;
+    color:#2563eb;
+}
+
+.contact-primary-btn:hover{
+    transform:translateY(-3px);
+}
+
+.contact-secondary-btn{
+    border:2px solid rgba(255,255,255,.25);
+    color:#fff;
+}
+
+.contact-secondary-btn:hover{
+    background:#fff;
+    color:#2563eb;
+}
+
+@media(max-width:992px){
+
+.contact-hero h1{
+    font-size:48px;
+}
+
+}
+
+@media(max-width:768px){
+
+.contact-hero{
+    padding:150px 0 90px;
+}
+
+.contact-hero h1{
+    font-size:36px;
+}
+
+.contact-hero p{
+    font-size:16px;
+}
+
+.contact-hero-buttons{
+    flex-direction:column;
+}
+
+.contact-hero-buttons a{
+    width:240px;
+    margin:auto;
+}
+} 

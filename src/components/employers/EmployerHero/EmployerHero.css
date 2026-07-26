@@ -1,0 +1,267 @@
+/*==================================
+        EMPLOYER HERO
+==================================*/
+
+.employer-hero{
+    position: relative;
+    padding: 170px 0 100px;
+    overflow: hidden;
+    background: linear-gradient(135deg,#071a3d 0%,#0b2c6d 55%,#1663d6 100%);
+}
+
+.employer-hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);
+    background-size: 26px 26px;
+    opacity: .6;
+}
+
+.employer-hero .container{
+    position: relative;
+    z-index: 2;
+}
+
+.employer-hero-grid{
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 70px;
+    align-items: center;
+}
+
+/*==================================
+        CONTENT
+==================================*/
+
+.employer-badge{
+    display:inline-flex;
+    align-items:center;
+    padding:8px 18px;
+    border-radius:40px;
+    background:rgba(14,165,233,.12);
+    color:#38bdf8;
+    border:1px solid rgba(56,189,248,.25);
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:22px;
+}
+
+.employer-hero-content h1{
+    color:#fff;
+    font-size:64px;
+    line-height:1.15;
+    margin-bottom:24px;
+    font-weight:700;
+}
+
+.employer-hero-content h1 span{
+    color:#2ea3ff;
+}
+
+.employer-hero-content p{
+    color:rgba(255,255,255,.78);
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:42px;
+    max-width:640px;
+}
+
+/*==================================
+        BUTTONS
+==================================*/
+
+.employer-hero-buttons{
+    display:flex;
+    gap:18px;
+    margin-bottom:50px;
+    flex-wrap:wrap;
+}
+
+.employer-hero-buttons a{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    padding:15px 34px;
+    border-radius:50px;
+    font-weight:600;
+    transition:.35s;
+}
+
+.employer-primary-btn{
+    background:#2563eb;
+    color:#fff;
+}
+
+.employer-primary-btn:hover{
+    transform:translateY(-3px);
+    background:#1d4ed8;
+}
+
+.employer-secondary-btn{
+    border:2px solid rgba(255,255,255,.18);
+    color:#fff;
+}
+
+.employer-secondary-btn:hover{
+    background:#fff;
+    color:#2563eb;
+}
+
+/*==================================
+        FEATURE CARDS
+==================================*/
+
+.employer-feature-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.employer-feature-card{
+    display:flex;
+    gap:18px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    padding:24px;
+    transition:.35s;
+}
+
+.employer-feature-card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(37,99,235,.55);
+}
+
+.employer-feature-card svg{
+    color:#38bdf8;
+    font-size:28px;
+    flex-shrink:0;
+    margin-top:2px;
+}
+
+.employer-feature-card h4{
+    color:#fff;
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.employer-feature-card p{
+    color:rgba(255,255,255,.70);
+    font-size:15px;
+    line-height:1.7;
+    margin:0;
+}
+
+/*==================================
+        IMAGE
+==================================*/
+
+.employer-hero-image{
+    display:flex;
+    justify-content:center;
+}
+
+.employer-hero-image img{
+    width:100%;
+    max-width:640px;
+    border-radius:28px;
+    object-fit:cover;
+    box-shadow:0 35px 80px rgba(0,0,0,.35);
+}
+
+/*==================================
+        RESPONSIVE
+==================================*/
+
+@media(max-width:1200px){
+
+.employer-hero-content h1{
+    font-size:54px;
+}
+
+}
+
+@media(max-width:992px){
+
+.employer-hero{
+    padding:150px 0 80px;
+}
+
+.employer-hero-grid{
+    grid-template-columns:1fr;
+}
+
+.employer-hero-image{
+    order:-1;
+}
+
+.employer-feature-grid{
+    grid-template-columns:1fr 1fr;
+}
+
+.employer-hero-content{
+    text-align:center;
+}
+
+.employer-hero-content p{
+    margin:auto auto 40px;
+}
+
+.employer-hero-buttons{
+    justify-content:center;
+}
+
+}
+
+@media(max-width:768px){
+
+.employer-hero{
+    padding:130px 0 70px;
+}
+
+.employer-hero-content h1{
+    font-size:42px;
+}
+
+.employer-hero-content p{
+    font-size:17px;
+}
+
+.employer-feature-grid{
+    grid-template-columns:1fr;
+}
+
+.employer-hero-buttons{
+    flex-direction:column;
+}
+
+.employer-hero-buttons a{
+    justify-content:center;
+    width:100%;
+}
+
+.employer-feature-card{
+    padding:20px;
+}
+
+}
+
+@media(max-width:480px){
+
+.employer-hero-content h1{
+    font-size:34px;
+}
+
+.employer-feature-card h4{
+    font-size:18px;
+}
+
+.employer-feature-card p{
+    font-size:14px;
+}
+
+}

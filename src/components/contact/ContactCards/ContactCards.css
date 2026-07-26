@@ -1,0 +1,107 @@
+/*==================================
+        CONTACT CARDS
+==================================*/
+
+.contact-cards{
+    padding:70px 0;
+    background:#f8fafc;
+}
+
+.contact-cards .container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.contact-card{
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:18px;
+    padding:28px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    transition:.35s ease;
+}
+
+.contact-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 40px rgba(15,23,42,.08);
+}
+
+.contact-card-icon{
+    width:70px;
+    height:70px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:28px;
+    flex-shrink:0;
+}
+
+.phone{
+    background:#2563eb;
+}
+
+.email{
+    background:#06b6d4;
+}
+
+.location{
+    background:#8b5cf6;
+}
+
+.contact-card-content span{
+    display:block;
+    font-size:14px;
+    color:#64748b;
+    margin-bottom:6px;
+}
+
+.contact-card-content h3{
+    font-size:22px;
+    color:#0f172a;
+    margin-bottom:6px;
+}
+
+.contact-card-content p{
+    font-size:15px;
+    color:#64748b;
+    line-height:1.6;
+}
+
+@media(max-width:992px){
+
+.contact-cards .container{
+    grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.contact-cards{
+    padding:50px 0;
+}
+
+.contact-card{
+    padding:22px;
+}
+
+.contact-card-icon{
+    width:60px;
+    height:60px;
+    font-size:24px;
+}
+
+.contact-card-content h3{
+    font-size:18px;
+}
+
+.contact-card-content p{
+    font-size:14px;
+}
+
+}

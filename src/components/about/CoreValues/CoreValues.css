@@ -1,0 +1,81 @@
+/*====================================
+          CORE VALUES
+=====================================*/
+
+.core-values{
+    padding:120px 0;
+    background:#fff;
+}
+
+.values-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:70px;
+}
+
+.value-card{
+    background:#fff;
+    border:1px solid #E2E8F0;
+    border-radius:20px;
+    padding:35px;
+    transition:.35s;
+}
+
+.value-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
+    border-color:#2563EB;
+}
+
+.value-icon{
+    width:70px;
+    height:70px;
+    border-radius:18px;
+    background:linear-gradient(135deg,#2563EB,#60A5FA);
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    margin-bottom:25px;
+}
+
+.value-card h3{
+    font-size:24px;
+    color:#0F172A;
+    margin-bottom:15px;
+}
+
+.value-card p{
+    color:#64748B;
+    line-height:1.8;
+}
+
+@media(max-width:992px){
+
+.values-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.core-values{
+    padding:80px 0;
+}
+
+.values-grid{
+    grid-template-columns:1fr;
+}
+
+.value-card{
+    padding:30px;
+}
+
+.value-card h3{
+    font-size:22px;
+}
+
+}

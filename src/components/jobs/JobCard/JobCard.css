@@ -1,0 +1,250 @@
+/*==================================
+            JOB CARD
+==================================*/
+
+.job-card{
+    position:relative;
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:20px;
+    padding:28px;
+    transition:.35s ease;
+    box-shadow:0 10px 30px rgba(15,23,42,.05);
+    overflow:hidden;
+}
+
+.job-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 25px 55px rgba(15,23,42,.12);
+}
+
+/*==================================
+        URGENT BADGE
+==================================*/
+
+.job-urgent-badge{
+    position:absolute;
+    top:18px;
+    right:18px;
+    background:#ef4444;
+    color:#fff;
+    font-size:12px;
+    font-weight:600;
+    padding:7px 14px;
+    border-radius:30px;
+}
+
+/*==================================
+        HEADER
+==================================*/
+
+.job-card-header{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-bottom:25px;
+}
+
+.job-company-logo{
+    width:64px;
+    height:64px;
+    border-radius:16px;
+    background:#2563eb;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    font-weight:700;
+    flex-shrink:0;
+}
+
+.job-company-info h3{
+    font-size:22px;
+    color:#0f172a;
+    margin-bottom:6px;
+}
+
+.job-company-info p{
+    color:#64748b;
+    font-size:15px;
+}
+
+/*==================================
+        META INFO
+==================================*/
+
+.job-meta{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+    margin-bottom:24px;
+}
+
+.job-meta span{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#475569;
+    font-size:14px;
+}
+
+.job-meta svg{
+    color:#2563eb;
+    font-size:17px;
+}
+
+/*==================================
+        SKILLS
+==================================*/
+
+.job-skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:28px;
+}
+
+.job-skills span{
+    background:#eff6ff;
+    color:#2563eb;
+    padding:8px 16px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+}
+
+/*==================================
+        FOOTER
+==================================*/
+
+.job-footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-top:1px solid #eef2f7;
+    padding-top:22px;
+}
+
+.job-posted small{
+    display:block;
+    color:#94a3b8;
+    margin-bottom:4px;
+}
+
+.job-posted strong{
+    color:#0f172a;
+    font-size:15px;
+}
+
+.job-buttons{
+    display:flex;
+    gap:12px;
+}
+
+.job-view-btn,
+.job-apply-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    height:46px;
+    padding:0 22px;
+    border-radius:10px;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.job-view-btn{
+    border:1px solid #dbe3ea;
+    color:#334155;
+}
+
+.job-view-btn:hover{
+    border-color:#2563eb;
+    color:#2563eb;
+}
+
+.job-apply-btn{
+    background:#2563eb;
+    color:#fff;
+}
+
+.job-apply-btn:hover{
+    background:#1d4ed8;
+}
+
+/*==================================
+        RESPONSIVE
+==================================*/
+
+@media(max-width:768px){
+
+.job-card{
+    padding:22px;
+}
+
+.job-company-info h3{
+    font-size:20px;
+}
+
+.job-meta{
+    grid-template-columns:1fr;
+}
+
+.job-footer{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:18px;
+}
+
+.job-buttons{
+    width:100%;
+}
+
+.job-view-btn,
+.job-apply-btn{
+    flex:1;
+}
+
+}
+
+@media(max-width:480px){
+
+.job-card{
+    padding:18px;
+    border-radius:16px;
+}
+
+.job-card-header{
+    align-items:flex-start;
+}
+
+.job-company-logo{
+    width:56px;
+    height:56px;
+    font-size:20px;
+}
+
+.job-company-info h3{
+    font-size:18px;
+}
+
+.job-buttons{
+    flex-direction:column;
+}
+
+.job-view-btn,
+.job-apply-btn{
+    width:100%;
+}
+
+.job-urgent-badge{
+    position:static;
+    display:inline-block;
+    margin-bottom:18px;
+}
+
+}

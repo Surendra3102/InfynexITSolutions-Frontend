@@ -1,0 +1,159 @@
+/*====================================
+        MISSION & VISION
+=====================================*/
+
+.mission-vision{
+    padding:120px 0;
+    background:#F8FAFC;
+}
+
+/* Heading */
+
+.mission-heading{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.mission-heading h2{
+    font-size:56px;
+    color:#0F172A;
+    margin:20px 0;
+}
+
+.mission-heading p{
+    max-width:720px;
+    margin:auto;
+    color:#64748B;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* Cards */
+
+.mission-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+}
+
+.mission-card,
+.vision-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:24px;
+    padding:45px;
+    color:#fff;
+    transition:.35s;
+}
+
+.mission-card{
+    background:linear-gradient(135deg,#2563EB,#3B82F6);
+}
+
+.vision-card{
+    background:linear-gradient(135deg,#0F172A,#1E3A8A);
+}
+
+.mission-card:hover,
+.vision-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 45px rgba(15,23,42,.18);
+}
+
+/* Decorative Circle */
+
+.mission-card::after,
+.vision-card::after{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:rgba(255,255,255,.06);
+    right:-80px;
+    bottom:-80px;
+}
+
+/* Icon */
+
+.mission-icon{
+    width:75px;
+    height:75px;
+    border-radius:18px;
+    background:rgba(255,255,255,.15);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:34px;
+    margin-bottom:30px;
+    position:relative;
+    z-index:2;
+}
+
+.mission-card h3,
+.vision-card h3{
+    font-size:34px;
+    margin-bottom:18px;
+    position:relative;
+    z-index:2;
+}
+
+.mission-card p,
+.vision-card p{
+    line-height:1.9;
+    color:rgba(255,255,255,.92);
+    position:relative;
+    z-index:2;
+}
+
+/* Tablet */
+
+@media(max-width:992px){
+
+.mission-grid{
+    grid-template-columns:1fr;
+}
+
+.mission-heading h2{
+    font-size:44px;
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.mission-vision{
+    padding:80px 0;
+}
+
+.mission-heading{
+    margin-bottom:50px;
+}
+
+.mission-heading h2{
+    font-size:34px;
+}
+
+.mission-heading p{
+    font-size:16px;
+}
+
+.mission-card,
+.vision-card{
+    padding:35px;
+}
+
+.mission-icon{
+    width:65px;
+    height:65px;
+    font-size:28px;
+}
+
+.mission-card h3,
+.vision-card h3{
+    font-size:28px;
+}
+
+}
