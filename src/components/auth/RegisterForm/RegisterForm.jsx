@@ -1,7 +1,7 @@
 import "./RegisterForm.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import api from "../../../api/axios";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 
@@ -213,7 +213,7 @@ function RegisterForm() {
     setLoading(true);
 
     const response = await axios.post(
-        "http://127.0.0.1:8000/api/accounts/register/",
+        "/accounts/register/",
         registerData
     );
 
