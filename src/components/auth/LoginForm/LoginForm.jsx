@@ -249,24 +249,6 @@ function LoginForm() {
           )}
         </button>
 
-        <div className="divider">
-          <span>OR</span>
-        </div>
-
-        <button
-          type="button"
-          className="google-btn"
-          disabled={loading}
-          onClick={() =>
-            toast.info("Google Sign-In coming soon!")
-          }
-        >
-          <FcGoogle size={22} />
-
-          Continue with Google
-
-        </button>
-
         <div className="register-link">
 
           <p>

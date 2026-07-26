@@ -2,8 +2,7 @@ import "./RegisterForm.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import api from "../../../api/axios";
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from 'react-toastify';
+
 
 import {
     FiUser,
@@ -32,6 +31,8 @@ function RegisterForm() {
 
     const navigate = useNavigate();
 
+    const [serverError, setServerError] = useState("");
+    
     const [userType, setUserType] = useState("candidate");
 
     const [showPassword, setShowPassword] = useState(false);
@@ -211,37 +212,59 @@ function RegisterForm() {
 
         try {
     setLoading(true);
+    setServerError("");
 
-    const response = await axios.post(
+    const response = await api.post(
         "/accounts/register/",
         registerData
     );
 
-    console.log(response.status);
     console.log(response.data);
 
-    // Navigate immediately if the request succeeded
     navigate("/login", { replace: true });
 
 } catch (error) {
+
     console.error(error);
 
-    if (error.response?.data?.errors) {
+    if (error.response?.data) {
 
-        const backendErrors = {};
+        const data = error.response.data;
 
-        Object.entries(error.response.data.errors).forEach(([key, value]) => {
-            backendErrors[key] = Array.isArray(value) ? value[0] : value;
-        });
+        if (typeof data === "object") {
 
-        setErrors(backendErrors);
+            const backendErrors = {};
+
+            Object.entries(data).forEach(([key, value]) => {
+
+                backendErrors[key] = Array.isArray(value)
+                    ? value[0]
+                    : value;
+
+            });
+
+            setErrors(backendErrors);
+
+        }
+
+        setServerError(
+            data.detail ||
+            data.message ||
+            "Registration failed. Please try again."
+        );
 
     } else {
-        alert("Registration failed.");
+
+        setServerError(
+            "Unable to connect to the server."
+        );
+
     }
 
 } finally {
+
     setLoading(false);
+
 }
     };
         return (
@@ -509,6 +532,13 @@ function RegisterForm() {
                         {errors.acceptTerms}
                     </small>
 
+                )}
+
+                {/* Server Error */}
+                {serverError && (
+                <div className="server-error">
+                {serverError}
+                </div>
                 )}
 
                 <button

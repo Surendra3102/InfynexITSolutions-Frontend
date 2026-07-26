@@ -5,6 +5,7 @@
 .register-card{
     width:100%;
     max-width:500px;
+    margin-top: 40px;
 }
 
 .register-card h1{
