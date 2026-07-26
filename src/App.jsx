@@ -8,12 +8,10 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Employers from "./pages/Employers";
-import FindJobs from "./pages/FindJobs";
+
 
 /* Jobs */
-import JobDetails from "./components/jobs/JobDetails/JobDetails";
-import ApplyForm from "./components/jobs/ApplyForm/ApplyForm";
-import ApplicationSuccess from "./components/jobs/ApplicationSuccess/ApplicationSuccess";
+
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ForgotPassword from "./pages/ForgotPassword";
@@ -42,18 +40,9 @@ function App() {
 
         <Route path="/employers" element={<Employers />} />
 
-        <Route path="/jobs" element={<FindJobs />} />
 
-        {/* Jobs */}
+        
 
-        <Route path="/jobs/:id" element={<JobDetails />} />
-
-        <Route path="/jobs/:id/apply" element={<ApplyForm />} />
-
-        <Route
-          path="/application-success"
-          element={<ApplicationSuccess />}
-        />
 
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
