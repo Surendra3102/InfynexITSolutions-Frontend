@@ -6,7 +6,7 @@ import {
   FiZap,
   FiArrowRight
 } from "react-icons/fi";
-
+import { Link } from "react-router-dom";
 import candidateImage from "../../../assets/job-seeker.png";
 
 const features = [
@@ -106,13 +106,13 @@ function JobSeekers() {
 
           </div>
 
-          <a href="/login" className="job-profile-link" style={{textDecoration:"none"}}><button className="profile-btn">
+          <Link to="/login" className="job-profile-link" style={{textDecoration:"none"}}><button className="profile-btn">
 
             Create Free Profile
 
             <FiArrowRight />
 
-          </button></a>
+          </button></Link>
 
         </div>
 

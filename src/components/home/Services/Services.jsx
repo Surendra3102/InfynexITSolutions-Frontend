@@ -7,7 +7,7 @@ import {
   FaUserTie,
   FaCog,
 } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 const services = [
   {
     icon: <FaBriefcase />,
@@ -82,9 +82,9 @@ function Services() {
 
               <p>{service.desc}</p>
 
-              <a href="/services">
+              <Link to="/services">
                 Learn More →
-              </a>
+              </Link>
 
             </div>
           ))}
