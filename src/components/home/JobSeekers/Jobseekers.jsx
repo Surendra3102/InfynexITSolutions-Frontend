@@ -1,4 +1,4 @@
-import "./JobSeekers.css";
+import "./Jobseekers.css";
 import {
   FiSearch,
   FiFileText,
