@@ -16,7 +16,7 @@ import {
   useRef,
 } from "react";
 
-import logo from "../../../assets/navlogo.png";
+import logo from "../../../assets/navlogohd.png";
 
 import { AuthContext } from "../../../context/AuthContext";
 
@@ -143,13 +143,23 @@ function Navbar() {
               Services
             </NavLink>
 
+            <NavLink to="/industries">
+              Industries
+            </NavLink>
+
             <NavLink to="/employers">
               Employers
+            </NavLink>
+
+            <NavLink to="/careers">
+              Careers
             </NavLink>
 
             <NavLink to="/contact">
               Contact
             </NavLink>
+
+            
           </nav>
 
           {/* Right Side */}

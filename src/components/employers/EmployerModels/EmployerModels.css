@@ -1,198 +1,1060 @@
-/*==================================
-        EMPLOYER MODELS
-==================================*/
+/*====================================================
+                EMPLOYER MODELS
+====================================================*/
 
 .employer-models{
-    padding:100px 0;
-    background:#ffffff;
+
+    position:relative;
+
+    padding:110px 0;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at top right,#CCFBF1 0%,transparent 30%),
+        radial-gradient(circle at bottom left,#ECFDF5 0%,transparent 35%),
+        #F8FAFC;
 }
 
-.employer-models-badge{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:8px 18px;
-    border-radius:30px;
-    background:#eaf2ff;
-    color:#2563eb;
-    font-size:13px;
-    font-weight:600;
-    text-transform:uppercase;
-    margin:0 auto 18px;
+/*====================================================
+                BACKGROUND BLOBS
+====================================================*/
+
+.employer-models::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    top:-240px;
+
+    right:-220px;
+
+    border-radius:50%;
+
+    background:rgba(15,118,110,.08);
+
+    filter:blur(90px);
+
+    animation:blobOne 12s ease-in-out infinite;
 }
+
+.employer-models::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:380px;
+
+    height:380px;
+
+    left:-140px;
+
+    bottom:-140px;
+
+    border-radius:50%;
+
+    background:rgba(20,184,166,.08);
+
+    filter:blur(80px);
+
+    animation:blobTwo 14s ease-in-out infinite;
+}
+
+/*====================================================
+                CONTAINER
+====================================================*/
 
 .employer-models .container{
+
+    max-width:1320px;
+
+    margin:auto;
+
+    padding:0 22px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+/*====================================================
+                HEADER
+====================================================*/
+
+.employer-model-header{
+
+    max-width:760px;
+
+    margin:auto;
+
+    margin-bottom:80px;
+
     text-align:center;
 }
 
-.employer-models-title{
-    font-size:46px;
+.employer-model-header .section-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 20px;
+
+    border-radius:50px;
+
+    background:#CCFBF1;
+
+    color:#0F766E;
+
+    font-size:13px;
+
     font-weight:700;
-    color:#0f172a;
+
+    letter-spacing:.8px;
+
+    text-transform:uppercase;
+
+    margin-bottom:22px;
+}
+
+.employer-model-header h2{
+
+    font-size:46px;
+
+    line-height:1.2;
+
+    color:#0F172A;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+}
+
+.employer-model-header p{
+
+    font-size:17px;
+
+    color:#64748B;
+
+    line-height:1.9;
+}
+
+/*====================================================
+                MAIN LAYOUT
+====================================================*/
+
+.employer-model-layout{
+
+    display:grid;
+
+    grid-template-columns:330px 1fr;
+
+    gap:45px;
+
+    align-items:start;
+}
+
+/*====================================================
+                LEFT NAVIGATION
+====================================================*/
+
+.employer-model-menu{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    position:sticky;
+
+    top:120px;
+}
+
+/*====================================================
+                MENU CARD
+====================================================*/
+
+.model-button{
+
+    position:relative;
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:20px 22px;
+
+    border:none;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(14px);
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+    text-align:left;
+
+    transition:.45s;
+
+    box-shadow:
+
+        0 10px 35px rgba(15,23,42,.05),
+
+        inset 0 0 0 1px rgba(255,255,255,.7);
+}
+
+/*====================================================
+            LIGHT GRADIENT
+====================================================*/
+
+.model-button::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            rgba(20,184,166,.08),
+
+            transparent 70%
+
+        );
+
+    opacity:0;
+
+    transition:.45s;
+}
+
+.model-button:hover::before,
+
+.model-button.active::before{
+
+    opacity:1;
+}
+
+/*====================================================
+            ACTIVE GLOW
+====================================================*/
+
+.model-button::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    right:-40px;
+
+    top:-40px;
+
+    border-radius:50%;
+
+    background:rgba(20,184,166,.15);
+
+    filter:blur(35px);
+
+    opacity:0;
+
+    transition:.45s;
+}
+
+.model-button.active::after{
+
+    opacity:1;
+}
+
+/*====================================================
+                HOVER
+====================================================*/
+
+.model-button:hover{
+
+    transform:
+
+        translateX(10px)
+
+        scale(1.02);
+
+    box-shadow:
+
+        0 20px 45px rgba(15,118,110,.14);
+}
+
+.model-button.active{
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #0F766E,
+
+            #14B8A6
+
+        );
+
+    color:#fff;
+
+    transform:translateX(12px);
+
+    box-shadow:
+
+        0 28px 55px rgba(15,118,110,.22);
+}
+
+/*====================================================
+                    ICON
+====================================================*/
+
+.model-button svg{
+
+    width:58px;
+
+    height:58px;
+
+    min-width:58px;
+
+    padding:15px;
+
+    border-radius:18px;
+
+    background:#F0FDFA;
+
+    color:#0F766E;
+
+    font-size:24px;
+
+    transition:.45s;
+}
+
+.model-button:hover svg{
+
+    transform:
+
+        rotate(-8deg)
+
+        scale(1.08);
+}
+
+.model-button.active svg{
+
+    background:rgba(255,255,255,.18);
+
+    color:#fff;
+
+    transform:
+
+        rotate(-10deg)
+
+        scale(1.1);
+}
+
+/*====================================================
+                TITLE
+====================================================*/
+
+.model-button span{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    line-height:1.5;
+}
+
+/*====================================================
+                MOBILE ITEM
+====================================================*/
+
+.model-mobile-item{
+
+    width:100%;
+}
+
+.model-mobile-content{
+
+    display:none;
+}
+
+/*====================================================
+                PREVIEW PANEL
+====================================================*/
+
+.model-preview{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:32px;
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(16px);
+
+    border:1px solid rgba(255,255,255,.8);
+
+    box-shadow:
+        0 25px 70px rgba(15,23,42,.08),
+        inset 0 1px 0 rgba(255,255,255,.7);
+
+    animation:modelFade .55s ease;
+}
+
+/*====================================================
+                IMAGE
+====================================================*/
+
+.model-preview img{
+
+    width:100%;
+
+    height:430px;
+
+    display:block;
+
+    object-fit:cover;
+
+    transition:.7s ease;
+}
+
+.model-preview:hover img{
+
+    transform:scale(1.08);
+}
+
+/*====================================================
+                IMAGE OVERLAY
+====================================================*/
+
+.model-preview::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(15,118,110,.05),
+            rgba(15,118,110,.18)
+        );
+
+    pointer-events:none;
+}
+
+/*====================================================
+                CONTENT
+====================================================*/
+
+.model-content{
+
+    position:relative;
+
+    padding:42px;
+}
+
+.model-content h3{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#0F172A;
+
     margin-bottom:18px;
 }
 
-.employer-models-description{
-    max-width:760px;
-    margin:0 auto 60px;
-    color:#64748b;
-    font-size:18px;
-    line-height:1.8;
+.model-content p{
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    color:#64748B;
+
+    margin-bottom:34px;
 }
 
-/*==================================
-        GRID
-==================================*/
+/*====================================================
+                BENEFITS
+====================================================*/
 
-.employer-models-grid{
+.model-benefits{
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-}
 
-/*==================================
-        CARD
-==================================*/
-
-.employer-model-card{
-    position:relative;
-    background:#fff;
-    border:1px solid #e5e7eb;
-    border-radius:22px;
-    padding:42px 35px;
-    text-align:left;
-    transition:.35s ease;
-    overflow:hidden;
-}
-
-.employer-model-card:hover{
-    transform:translateY(-8px);
-    border-color:#2563eb;
-    box-shadow:0 20px 50px rgba(37,99,235,.10);
-}
-
-.employer-model-card.featured{
-    border:2px solid #2563eb;
-}
-
-/*==================================
-        BADGE
-==================================*/
-
-.model-badge{
-    position:absolute;
-    top:20px;
-    right:20px;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:6px 14px;
-    border-radius:30px;
-    background:#2563eb;
-    color:#fff;
-    font-size:12px;
-    font-weight:600;
-}
-
-.employer-model-card:not(.featured) .model-badge{
-    background:#7c3aed;
-}
-
-/*==================================
-        CONTENT
-==================================*/
-
-.employer-model-card h3{
-    font-size:30px;
-    color:#0f172a;
-    margin:30px 0 18px;
-}
-
-.employer-model-card p{
-    color:#64748b;
-    line-height:1.8;
-    font-size:16px;
-    margin-bottom:35px;
-    min-height:90px;
-}
-
-.employer-model-card a{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    text-decoration:none;
-    color:#2563eb;
-    font-weight:600;
-    transition:.3s;
-}
-
-.employer-model-card a:hover{
-    gap:14px;
-}
-
-/*==================================
-        RESPONSIVE
-==================================*/
-
-@media(max-width:1100px){
-
-.employer-models-grid{
     grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-bottom:38px;
 }
 
+.model-benefits div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    background:#F8FAFC;
+
+    border:1px solid #E2E8F0;
+
+    transition:.4s;
+
+    opacity:0;
+
+    animation:benefitReveal .5s forwards;
 }
 
-@media(max-width:768px){
+.model-benefits div:nth-child(1){
 
-.employer-models{
-    padding:80px 0;
+    animation-delay:.10s;
 }
 
-.employer-models-title{
-    font-size:34px;
+.model-benefits div:nth-child(2){
+
+    animation-delay:.18s;
 }
 
-.employer-models-description{
-    font-size:16px;
-    margin-bottom:45px;
+.model-benefits div:nth-child(3){
+
+    animation-delay:.26s;
 }
 
-.employer-models-grid{
-    grid-template-columns:1fr;
+.model-benefits div:nth-child(4){
+
+    animation-delay:.34s;
 }
 
-.employer-model-card{
-    padding:30px 24px;
+.model-benefits div:hover{
+
+    transform:translateY(-6px);
+
+    background:#ECFDF5;
+
+    border-color:#14B8A6;
 }
 
-.employer-model-card h3{
-    font-size:26px;
-    margin-top:20px;
+.model-benefits svg{
+
+    color:#0F766E;
+
+    font-size:18px;
+
+    flex-shrink:0;
 }
 
-.employer-model-card p{
-    min-height:auto;
-}
+.model-benefits span{
 
-.model-badge{
-    position:static;
-    margin-bottom:15px;
-}
-
-}
-
-@media(max-width:480px){
-
-.employer-models-title{
-    font-size:28px;
-}
-
-.employer-model-card h3{
-    font-size:22px;
-}
-
-.employer-model-card p{
     font-size:15px;
+
+    font-weight:600;
+
+    color:#0F172A;
 }
 
+/*====================================================
+                BUTTON
+====================================================*/
+
+.model-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:16px 34px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #0F766E,
+            #14B8A6
+        );
+
+    box-shadow:
+
+        0 18px 45px rgba(15,118,110,.22);
+
+    transition:.4s;
+}
+
+.model-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+        0 28px 60px rgba(15,118,110,.28);
+}
+
+.model-btn svg{
+
+    transition:.35s;
+}
+
+.model-btn:hover svg{
+
+    transform:translateX(6px);
+}
+
+/*====================================================
+                CONTENT GLOW
+====================================================*/
+
+.model-content::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    right:25px;
+
+    bottom:25px;
+
+    border-radius:50%;
+
+    background:rgba(20,184,166,.08);
+
+    filter:blur(45px);
+
+    pointer-events:none;
+}
+
+/*====================================================
+                ANIMATIONS
+====================================================*/
+
+@keyframes modelFade{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateX(40px)
+            scale(.98);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateX(0)
+            scale(1);
+
+    }
+
+}
+
+@keyframes benefitReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(18px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*====================================================
+                    TABLET
+====================================================*/
+
+@media (max-width:992px){
+
+    .employer-models{
+
+        padding:80px 0;
+    }
+
+    .employer-model-header{
+
+        margin-bottom:55px;
+    }
+
+    .employer-model-header h2{
+
+        font-size:38px;
+    }
+
+    .employer-model-layout{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+    }
+
+    .employer-model-menu{
+
+        position:static;
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:18px;
+    }
+
+    .model-preview img{
+
+        height:360px;
+    }
+
+    .model-content{
+
+        padding:34px;
+    }
+
+}
+
+/*====================================================
+                    MOBILE
+====================================================*/
+
+@media (max-width:768px){
+
+    .employer-models{
+
+        padding:60px 0;
+    }
+
+    .employer-models .container{
+
+        padding:0 18px;
+    }
+
+    .employer-model-header{
+
+        margin-bottom:40px;
+    }
+
+    .employer-model-header h2{
+
+        font-size:30px;
+
+        line-height:1.3;
+    }
+
+    .employer-model-header p{
+
+        font-size:15px;
+    }
+
+    .employer-model-layout{
+
+        display:block;
+    }
+
+    .employer-model-menu{
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:18px;
+    }
+
+    .model-preview{
+
+        display:none;
+    }
+
+    .model-mobile-content{
+
+        display:block;
+
+        margin-top:18px;
+
+        margin-bottom:10px;
+
+        border-radius:24px;
+
+        overflow:hidden;
+
+        background:#fff;
+
+        border:1px solid #E2E8F0;
+
+        box-shadow:
+
+            0 18px 45px rgba(15,23,42,.08);
+
+        animation:accordionOpen .45s ease;
+    }
+
+    .model-mobile-content img{
+
+        width:100%;
+
+        height:230px;
+
+        object-fit:cover;
+
+        display:block;
+    }
+
+    .model-mobile-content .model-content{
+
+        padding:26px 20px;
+    }
+
+    .model-mobile-content .model-benefits{
+
+        grid-template-columns:1fr;
+
+        gap:14px;
+    }
+
+    .model-mobile-content .model-btn{
+
+        width:100%;
+
+        justify-content:center;
+    }
+
+    .model-button{
+
+        transform:none !important;
+    }
+
+}
+
+/*====================================================
+                SMALL MOBILE
+====================================================*/
+
+@media (max-width:480px){
+
+    .employer-models{
+
+        padding:50px 0;
+    }
+
+    .employer-models .container{
+
+        padding:0 16px;
+    }
+
+    .employer-model-header h2{
+
+        font-size:24px;
+    }
+
+    .employer-model-header p{
+
+        font-size:14px;
+    }
+
+    .model-button{
+
+        padding:16px;
+    }
+
+    .model-button svg{
+
+        width:48px;
+
+        height:48px;
+
+        min-width:48px;
+
+        font-size:20px;
+    }
+
+    .model-button span{
+
+        font-size:14px;
+    }
+
+    .model-mobile-content img{
+
+        height:210px;
+    }
+
+    .model-content{
+
+        padding:22px 18px;
+    }
+
+    .model-content h3{
+
+        font-size:24px;
+    }
+
+    .model-content p{
+
+        font-size:14px;
+    }
+
+    .model-benefits div{
+
+        padding:14px;
+    }
+
+    .model-benefits span{
+
+        font-size:14px;
+    }
+
+    .model-btn{
+
+        width:100%;
+
+        justify-content:center;
+
+        padding:15px;
+    }
+
+}
+
+/*====================================================
+            FLOATING BACKGROUND
+====================================================*/
+
+@keyframes blobOne{
+
+    0%,100%{
+
+        transform:translateY(0);
+    }
+
+    50%{
+
+        transform:translateY(35px);
+    }
+
+}
+
+@keyframes blobTwo{
+
+    0%,100%{
+
+        transform:translateX(0);
+    }
+
+    50%{
+
+        transform:translateX(40px);
+    }
+
+}
+
+/*====================================================
+            MOBILE ACCORDION
+====================================================*/
+
+@keyframes accordionOpen{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+            translateY(20px)
+
+            scale(.98);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+            translateY(0)
+
+            scale(1);
+
+    }
+
+}
+
+/*====================================================
+            GLOBAL TRANSITIONS
+====================================================*/
+
+.model-button,
+.model-button svg,
+.model-preview,
+.model-preview img,
+.model-content,
+.model-benefits div,
+.model-btn{
+
+    transition:all .4s ease;
 }

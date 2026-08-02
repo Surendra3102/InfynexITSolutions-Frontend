@@ -1,100 +1,101 @@
 import "./CompanyStory.css";
-import officeImage from "../../../assets/about-office.png";
+
+import {
+  FaCheckCircle,
+} from "react-icons/fa";
+
+import storyImage from "../../../assets/company-story.png";
+
+const features = [
+  "IT Recruitment",
+  "Software Development",
+  "Cloud Solutions",
+  "AI & Automation",
+];
 
 function CompanyStory() {
+
   return (
+
     <section className="company-story">
 
-      <div className="container story-grid">
+      <div className="company-story-container">
 
-        {/* Left Content */}
+        {/* Left */}
 
-        <div className="story-content">
+        <div className="company-story-content">
 
-          <span className="section-badge">
-            OUR STORY
+          <span className="company-story-badge">
+
+            WHO WE ARE
+
           </span>
 
-          <h2>
-            Built on Trust,
-            <br />
-            Powered by Expertise
+          <h2 className="company-story-title">
+
+            Empowering Businesses Through
+            <span> Talent & Technology</span>
+
           </h2>
 
-          <p>
-            Infynex IT Solutions was established with a clear mission—to simplify
-            the hiring process for businesses while creating meaningful career
-            opportunities for talented professionals.
+          <p className="company-story-description">
+
+            At <strong>Infynex Global IT Solutions Pvt. Ltd.</strong>,
+            we believe every successful business needs
+            two key strengths:
+            exceptional people and innovative technology.
+
           </p>
 
-          <p>
-            We believe recruitment is more than filling vacancies. It's about
-            understanding people, company culture, and long-term success. Our
-            team works closely with employers and job seekers to build
-            relationships that create lasting value.
+          <p className="company-story-description">
+
+            We specialize in providing end-to-end IT
+            recruitment and software development services
+            to startups, SMEs and large enterprises.
+            Our team combines industry expertise with
+            modern technology to deliver customized
+            solutions that help organizations scale faster.
+
           </p>
 
-          <p>
-            As a growing recruitment partner, we are committed to delivering
-            reliable hiring solutions with transparency, professionalism, and
-            personalized service.
-          </p>
+          <div className="company-story-list">
 
-          <div className="stats-grid">
+            {features.map((item, index) => (
 
-            <div>
-              <h3>100%</h3>
-              <span>Client Commitment</span>
-            </div>
+              <div
+                key={index}
+                className="company-story-item"
+              >
 
-            <div>
-              <h3>24/7</h3>
-              <span>Recruitment Support</span>
-            </div>
+                <FaCheckCircle />
 
-            <div>
-              <h3>50+</h3>
-              <span>Hiring Positions</span>
-            </div>
+                <span>{item}</span>
 
-            <div>
-              <h3>Pan India</h3>
-              <span>Hiring Reach</span>
-            </div>
+              </div>
+
+            ))}
 
           </div>
 
         </div>
 
-        {/* Right Image */}
+        {/* Right */}
 
-        <div className="story-image">
+        <div className="company-story-image">
 
           <img
-            src={officeImage}
-            alt="Infynex Office"
+            src={storyImage}
+            alt="Company Story"
           />
-
-          <div className="floating-stats">
-
-            <div>
-              <h3>100%</h3>
-              <span>Client Focus</span>
-            </div>
-
-            <div>
-              <h3>Quality</h3>
-              <span>Hiring Solutions</span>
-            </div>
-
-          </div>
 
         </div>
 
       </div>
 
     </section>
+
   );
+
 }
 
 export default CompanyStory;

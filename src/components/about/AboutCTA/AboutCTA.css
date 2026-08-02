@@ -1,111 +1,605 @@
-/*====================================
-          ABOUT CTA
-====================================*/
+/*====================================================
+                    ABOUT CTA
+====================================================*/
 
 .about-cta{
-    padding:120px 0;
-    background:linear-gradient(135deg,#0B2E83,#2563EB);
+
     position:relative;
+
     overflow:hidden;
+
+    padding:90px 0;
+
+    background:linear-gradient(135deg,#071C4D 0%,#0A4ABF 100%);
 }
+
+/*====================================================
+                BACKGROUND EFFECTS
+====================================================*/
 
 .about-cta::before{
+
     content:"";
+
     position:absolute;
-    inset:0;
-    background:
-        radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);
-    background-size:30px 30px;
+
+    width:420px;
+
+    height:420px;
+
+    top:-180px;
+
+    right:-150px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    filter:blur(80px);
 }
+
+.about-cta::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    bottom:-140px;
+
+    left:-120px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.06);
+
+    filter:blur(80px);
+}
+
+/*====================================================
+                    CONTAINER
+====================================================*/
+
+.about-cta-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:0 20px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+/*====================================================
+                    CONTENT
+====================================================*/
 
 .about-cta-content{
+
     position:relative;
-    z-index:2;
-    max-width:850px;
-    margin:auto;
+
     text-align:center;
-    color:#fff;
+
+    padding:70px 60px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(16px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:28px;
+
+    box-shadow:0 25px 70px rgba(0,0,0,.18);
 }
 
-.about-cta-content .section-badge{
-    background:rgba(255,255,255,.15);
-    color:#fff;
+/*====================================================
+                    BADGE
+====================================================*/
+
+.about-cta-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    color:#D7ECFF;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+    margin-bottom:22px;
 }
 
-.about-cta-content h2{
-    font-size:56px;
-    line-height:1.2;
-    margin:25px 0;
+/*====================================================
+                    TITLE
+====================================================*/
+
+.about-cta-title{
+
+    font-size:42px;
+
+    color:#ffffff;
+
+    font-weight:700;
+
+    line-height:1.25;
+
+    margin-bottom:20px;
 }
 
-.about-cta-content p{
-    font-size:18px;
+/*====================================================
+                DESCRIPTION
+====================================================*/
+
+.about-cta-description{
+
+    max-width:760px;
+
+    margin:0 auto 40px;
+
+    font-size:17px;
+
     line-height:1.9;
-    color:rgba(255,255,255,.9);
-    margin-bottom:45px;
+
+    color:rgba(255,255,255,.88);
 }
+
+/*====================================================
+                    BUTTONS
+====================================================*/
 
 .about-cta-buttons{
+
     display:flex;
+
     justify-content:center;
+
+    align-items:center;
+
     gap:20px;
+
+    margin-bottom:45px;
+
     flex-wrap:wrap;
 }
 
-.primary-btn,
-.secondary-btn{
-    display:inline-flex;
+/*====================================================
+                PRIMARY BUTTON
+====================================================*/
+
+.about-cta-primary{
+
+    display:flex;
+
     align-items:center;
+
+    justify-content:center;
+
     gap:10px;
-    padding:16px 34px;
-    border-radius:50px;
-    text-decoration:none;
+
+    padding:16px 32px;
+
+    background:#ffffff;
+
+    color:#0A4ABF;
+
+    border-radius:12px;
+
+    font-size:16px;
+
     font-weight:600;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(255,255,255,.15);
+}
+
+.about-cta-primary:hover{
+
+    background:#F8FAFC;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 40px rgba(255,255,255,.25);
+}
+
+.about-cta-primary svg{
+
     transition:.35s;
 }
 
-.primary-btn{
-    background:#fff;
-    color:#2563EB;
+.about-cta-primary:hover svg{
+
+    transform:translateX(6px);
 }
 
-.primary-btn:hover{
+/*====================================================
+                SECONDARY BUTTON
+====================================================*/
+
+.about-cta-secondary{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:16px 32px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.20);
+
+    backdrop-filter:blur(12px);
+
+    color:#ffffff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.35s;
+}
+
+.about-cta-secondary:hover{
+
+    background:rgba(255,255,255,.15);
+
+    border-color:rgba(255,255,255,.30);
+
     transform:translateY(-5px);
 }
 
-.secondary-btn{
-    border:2px solid rgba(255,255,255,.35);
-    color:#fff;
+.about-cta-secondary svg{
+
+    transition:.35s;
 }
 
-.secondary-btn:hover{
-    background:#fff;
-    color:#2563EB;
+.about-cta-secondary:hover svg{
+
+    transform:translateX(6px);
 }
 
-@media(max-width:768px){
+/*====================================================
+                FEATURES
+====================================================*/
 
-.about-cta{
-    padding:80px 0;
-}
+.about-cta-features{
 
-.about-cta-content h2{
-    font-size:36px;
-}
+    display:flex;
 
-.about-cta-content p{
-    font-size:16px;
-}
-
-.about-cta-buttons{
-    flex-direction:column;
-    align-items:center;
-}
-
-.primary-btn,
-.secondary-btn{
-    width:240px;
     justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
 }
 
+.about-cta-features div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:11px 18px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    transition:.35s;
+}
+
+.about-cta-features div:hover{
+
+    transform:translateY(-3px);
+
+    background:rgba(255,255,255,.14);
+}
+
+.about-cta-features svg{
+
+    color:#4ADE80;
+
+    font-size:17px;
+}
+
+.about-cta-features span{
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-weight:500;
+}
+
+/*====================================================
+                DECORATIVE GLOW
+====================================================*/
+
+.about-cta-content::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    top:-70px;
+
+    left:-70px;
+
+    border-radius:50%;
+
+    background:rgba(66,180,255,.08);
+
+    filter:blur(70px);
+
+    pointer-events:none;
+}
+
+.about-cta-content::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    bottom:-70px;
+
+    right:-70px;
+
+    border-radius:50%;
+
+    background:rgba(37,99,235,.08);
+
+    filter:blur(70px);
+
+    pointer-events:none;
+}
+
+/*====================================================
+                    TABLET
+====================================================*/
+
+@media (max-width:992px){
+
+    .about-cta{
+
+        padding:70px 0;
+    }
+
+    .about-cta-container{
+
+        padding:0 20px;
+    }
+
+    .about-cta-content{
+
+        padding:55px 40px;
+    }
+
+    .about-cta-title{
+
+        font-size:36px;
+    }
+
+    .about-cta-description{
+
+        font-size:16px;
+    }
+
+    .about-cta-buttons{
+
+        gap:16px;
+    }
+
+    .about-cta-primary,
+    .about-cta-secondary{
+
+        padding:15px 28px;
+
+        font-size:15px;
+    }
+
+    .about-cta-features{
+
+        gap:16px;
+    }
+
+}
+
+/*====================================================
+                    MOBILE
+====================================================*/
+
+@media (max-width:768px){
+
+    .about-cta{
+
+        padding:60px 0;
+    }
+
+    .about-cta-container{
+
+        padding:0 18px;
+    }
+
+    .about-cta-content{
+
+        padding:45px 24px;
+
+        border-radius:22px;
+    }
+
+    .about-cta-badge{
+
+        font-size:12px;
+
+        padding:7px 16px;
+
+        margin-bottom:18px;
+    }
+
+    .about-cta-title{
+
+        font-size:28px;
+
+        line-height:1.35;
+
+        margin-bottom:16px;
+    }
+
+    .about-cta-description{
+
+        font-size:15px;
+
+        line-height:1.8;
+
+        margin-bottom:30px;
+    }
+
+    .about-cta-buttons{
+
+        flex-direction:column;
+
+        gap:14px;
+
+        margin-bottom:35px;
+    }
+
+    .about-cta-primary,
+    .about-cta-secondary{
+
+        width:100%;
+
+        justify-content:center;
+
+        padding:15px;
+
+        font-size:15px;
+    }
+
+    .about-cta-features{
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:14px;
+    }
+
+    .about-cta-features div{
+
+        justify-content:center;
+
+        padding:12px;
+    }
+
+    .about-cta-features span{
+
+        font-size:14px;
+    }
+
+}
+
+/*====================================================
+                SMALL MOBILE
+====================================================*/
+
+@media (max-width:480px){
+
+    .about-cta{
+
+        padding:55px 0;
+    }
+
+    .about-cta-container{
+
+        padding:0 16px;
+    }
+
+    .about-cta-content{
+
+        padding:35px 18px;
+    }
+
+    .about-cta-title{
+
+        font-size:24px;
+    }
+
+    .about-cta-description{
+
+        font-size:14px;
+    }
+
+    .about-cta-features{
+
+        grid-template-columns:1fr;
+    }
+
+    .about-cta-features div{
+
+        width:100%;
+    }
+
+    .about-cta-features span{
+
+        font-size:13px;
+    }
+
+}
+
+/*====================================================
+                SMOOTH TRANSITIONS
+====================================================*/
+
+.about-cta-content,
+.about-cta-primary,
+.about-cta-secondary,
+.about-cta-features div,
+.about-cta-features svg{
+
+    transition:all .35s ease;
 }

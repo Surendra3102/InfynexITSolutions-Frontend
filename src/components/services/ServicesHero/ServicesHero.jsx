@@ -1,39 +1,90 @@
 import "./ServicesHero.css";
 import { Link } from "react-router-dom";
-import { FiArrowRight } from "react-icons/fi";
+import { FaArrowRight, FaCheckCircle } from "react-icons/fa";
+
+import heroImage from "../../../assets/services-hero.png";
 
 function ServicesHero() {
   return (
     <section className="services-hero">
 
-      <div className="container">
+      <div className="services-hero-container">
 
-        <span className="section-badge">
-          WHAT WE DO
-        </span>
+        {/* Left */}
 
-        <h1>
-          Full-Spectrum Recruitment
-          <span>& HR Services</span>
-        </h1>
+        <div className="services-hero-content">
 
-        <p>
-          We provide end-to-end recruitment and HR solutions that help
-          organizations hire smarter, faster, and with confidence. From
-          permanent hiring to RPO, our expert team supports every stage of
-          your talent acquisition journey.
-        </p>
+          <span className="services-hero-badge">
+            OUR SERVICES
+          </span>
 
-        <div className="hero-buttons">
+          <h1 className="services-hero-title">
+            IT Recruitment &
+            <span> Software Development</span>
+            Solutions
+          </h1>
 
-          <a href="#services" className="primary-btn">
-            Explore Services
-            <FiArrowRight />
-          </a>
+          <p className="services-hero-description">
+            We help businesses accelerate growth through world-class
+            IT staffing, innovative software development,
+            cloud solutions, AI automation, and digital transformation.
+            From hiring exceptional talent to building scalable software,
+            Infynex is your trusted technology partner.
+          </p>
 
-          <Link to="/contact" className="secondary-btn">
-            Contact Us
-          </Link>
+          <div className="services-hero-buttons">
+
+            <Link
+              to="/contact"
+              className="services-primary-btn"
+            >
+              Hire Talent
+              <FaArrowRight />
+            </Link>
+
+            <Link
+              to="/contact"
+              className="services-secondary-btn"
+            >
+              Build Software
+            </Link>
+
+          </div>
+
+          <div className="services-hero-features">
+
+            <div>
+              <FaCheckCircle />
+              <span>IT Recruitment</span>
+            </div>
+
+            <div>
+              <FaCheckCircle />
+              <span>Software Development</span>
+            </div>
+
+            <div>
+              <FaCheckCircle />
+              <span>Cloud Solutions</span>
+            </div>
+
+            <div>
+              <FaCheckCircle />
+              <span>AI & Automation</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* Right */}
+
+        <div className="services-hero-image">
+
+          <img
+            src={heroImage}
+            alt="Infynex Services"
+          />
 
         </div>
 

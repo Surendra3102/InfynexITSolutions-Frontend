@@ -1,4 +1,7 @@
 import "./Footer.css";
+
+import { Link } from "react-router-dom";
+
 import {
   FiMapPin,
   FiPhone,
@@ -7,186 +10,227 @@ import {
   FiLinkedin,
   FiInstagram,
   FiTwitter,
-  FiSend,
+  FiArrowUpRight,
 } from "react-icons/fi";
 
 import logo from "../../../assets/logo.png";
 
 function Footer() {
+
   return (
+
     <footer className="footer">
-      <div className="container footer-grid">
 
-        {/* Company */}
+      <div className="container">
 
-        <div className="footer-column">
+        <div className="footer-top">
 
-          <img
-            src={logo}
-            alt="Infynex"
-            className="footer-logo"
-          />
+          {/* Company */}
 
-          <p className="footer-description">
-            India's premier HR & Recruitment partner connecting exceptional
-            talent with industry-leading companies through innovative hiring
-            solutions and workforce excellence.
-          </p>
+          <div className="footer-company">
 
-        </div>
-
-        {/* Links */}
-
-        {/* Links & Services */}
-
-<div className="footer-column">
-
-  <div className="footer-links-grid">
-
-    <div>
-
-      <h3>Quick Links</h3>
-
-      <ul>
-
-        <li><a href="/">Home</a></li>
-
-        <li><a href="/about">About Us</a></li>
-
-        <li><a href="/services">Services</a></li>
-
-        <li><a href="/Employers">Employers</a></li>
-
-        <li><a href="/Contact">Contact</a></li>
-
-      </ul>
-
-    </div>
-
-    <div>
-
-      <h3>Services</h3>
-
-      <ul>
-
-        <li><a href="/services">Permanent Hiring</a></li>
-
-        <li><a href="/services">IT Recruitment</a></li>
-
-        <li><a href="/services">Executive Hiring</a></li>
-
-        <li><a href="/services">HR Outsourcing</a></li>
-
-      </ul>
-
-    </div>
-
-  </div>
-
-</div>
-
-        
-        {/* Stay Updated */}
-
-        <div className="footer-column">
-
-          <h3>Stay Updated</h3>
-
-          <p className="footer-news-text">
-            Subscribe to receive job openings and HR insights.
-          </p>
-
-          <div className="newsletter">
-
-            <input
-              type="email"
-              placeholder="Your email"
+            <img
+              src={logo}
+              alt="Infynex Global"
+              className="footer-logo"
             />
 
-            <button>
+            <p>
 
-              <FiSend />
+              Infynex Global IT Solutions delivers recruitment,
+              staffing, and workforce solutions that connect
+              exceptional talent with forward-thinking businesses.
 
-            </button>
+            </p>
+
+            <div className="footer-social">
+
+              <a href="#">
+
+                <FiFacebook />
+
+              </a>
+
+              <a href="#">
+
+                <FiLinkedin />
+
+              </a>
+
+              <a href="#">
+
+                <FiInstagram />
+
+              </a>
+
+              <a href="#">
+
+                <FiTwitter />
+
+              </a>
+
+            </div>
 
           </div>
 
-          <ul className="contact-list">
+          {/* Quick Links */}
 
-            <li>
+          <div className="footer-links">
+
+            <h4>
+
+              Quick Links
+
+            </h4>
+
+            <Link to="/">Home</Link>
+
+            <Link to="/about">About</Link>
+
+            <Link to="/services">Services</Link>
+
+            <Link to="/industries">Industries</Link>
+
+            <Link to="/employers">Employers</Link>
+
+            <Link to="/careers">Careers</Link>
+
+            <Link to="/contact">Contact</Link>
+
+          </div>
+
+          {/* Services */}
+
+          <div className="footer-links">
+
+            <h4>
+
+              Services
+
+            </h4>
+
+            <Link to="/services">
+
+              Permanent Recruitment
+
+            </Link>
+
+            <Link to="/services">
+
+              Contract Staffing
+
+            </Link>
+
+            <Link to="/services">
+
+              Executive Search
+
+            </Link>
+
+            <Link to="/services">
+
+              HR Outsourcing
+
+            </Link>
+
+            <Link to="/services">
+
+              RPO Services
+
+            </Link>
+
+          </div>
+
+          {/* Contact */}
+
+          <div className="footer-contact">
+
+            <h4>
+
+              Contact
+
+            </h4>
+
+            <div>
 
               <FiMapPin />
 
               <span>
-                Kakatiya Hills, Madhapur,
-                Hyderabad – 500085
+
+                Madhapur,
+                Hyderabad
+
               </span>
 
-            </li>
+            </div>
 
-            <li>
+            <div>
 
               <FiPhone />
 
               <span>
+
                 +91 80 4567 8900
+
               </span>
 
-            </li>
+            </div>
 
-            <li>
+            <div>
 
               <FiMail />
 
               <span>
+
                 hello@infynex.in
+
               </span>
 
-            </li>
+            </div>
 
-          </ul>
+            <Link
+              to="/contact"
+              className="footer-contact-btn"
+            >
 
-          <div className="social-icons">
+              Contact Us
 
-            <a href="#" aria-label="Facebook">
-              <FiFacebook />
-            </a>
+              <FiArrowUpRight />
 
-            <a href="#" aria-label="LinkedIn">
-              <FiLinkedin />
-            </a>
-
-            <a href="#" aria-label="Instagram">
-              <FiInstagram />
-            </a>
-
-            <a href="#" aria-label="Twitter">
-              <FiTwitter />
-            </a>
+            </Link>
 
           </div>
 
         </div>
 
-      </div>
-
-      {/* Bottom Footer */}
-
-      <div className="footer-bottom">
-
-        <div className="container footer-bottom-content">
+        <div className="footer-bottom">
 
           <p>
-            © 2026 Infynex IT Solutions Pvt. Ltd. All Rights Reserved.
+
+            © 2026 Infynex Global IT Solutions Pvt. Ltd.
+            All rights reserved.
+
           </p>
 
-          <div className="footer-links">
+          <div>
 
-            <a href="#">Privacy Policy</a>
+            <Link to="/privacy">
 
-            <a href="#">Terms of Service</a>
+              Privacy
 
-            <a href="#">Cookie Policy</a>
+            </Link>
+
+            <Link to="/terms">
+
+              Terms
+
+            </Link>
+
+            <Link to="/cookies">
+
+              Cookies
+
+            </Link>
 
           </div>
 
@@ -195,7 +239,9 @@ function Footer() {
       </div>
 
     </footer>
+
   );
+
 }
 
 export default Footer;

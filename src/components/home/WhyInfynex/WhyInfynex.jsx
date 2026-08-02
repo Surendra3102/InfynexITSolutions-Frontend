@@ -1,91 +1,148 @@
 import "./WhyInfynex.css";
+import { Link } from "react-router-dom";
 import {
-  FiZap,
-  FiShield,
-  FiAward,
-  FiCheckCircle,
-  FiTrendingUp,
-  FiBookOpen,
-} from "react-icons/fi";
+  FaUsers,
+  FaCheckCircle,
+  FaLaptopCode,
+  FaCloud,
+  FaHandshake,
+  FaHeadset,
+  FaArrowRight,
+} from "react-icons/fa";
+
+import whyImage from "../../../assets/why_infynex.png";
 
 const features = [
   {
-    icon: <FiZap />,
-    title: "Fast Hiring Cycles",
-    desc: "Average time-to-hire of 12 days — 40% faster than industry benchmarks.",
-    color: "#2563EB",
+    icon: <FaUsers />,
+    title: "Experienced Recruitment Specialists",
   },
   {
-    icon: <FiShield />,
-    title: "Verified Talent Pool",
-    desc: "3-layer background verification for every candidate we recommend.",
-    color: "#06B6D4",
+    icon: <FaUsers />,
+    title: "Access to a Large IT Talent Pool",
   },
   {
-    icon: <FiAward />,
-    title: "Expert Recruiters",
-    desc: "120+ certified domain specialists with 10+ years average experience.",
-    color: "#2563EB",
+    icon: <FaCheckCircle />,
+    title: "Fast Turnaround Time",
   },
   {
-    icon: <FiCheckCircle />,
-    title: "Quality Assurance",
-    desc: "Every candidate goes through technical and HR screening.",
-    color: "#3B82F6",
+    icon: <FaCheckCircle />,
+    title: "Quality-Driven Hiring Process",
   },
   {
-    icon: <FiTrendingUp />,
-    title: "98% Client Satisfaction",
-    desc: "Long-term partnerships built on consistent hiring success.",
-    color: "#2563EB",
+    icon: <FaLaptopCode />,
+    title: "Agile Software Development",
   },
   {
-    icon: <FiBookOpen />,
-    title: "Industry Expertise",
-    desc: "Recruitment solutions across IT, Healthcare, Finance and Manufacturing.",
-    color: "#2563EB",
+    icon: <FaCloud />,
+    title: "Cost-Effective Engagement Models",
+  },
+  {
+    icon: <FaHandshake />,
+    title: "Transparent Communication",
+  },
+  {
+    icon: <FaHeadset />,
+    title: "Dedicated Customer Support",
   },
 ];
 
 function WhyInfynex() {
   return (
-    <section className="why-infynex">
+    <section className="home-why">
 
-      <div className="container">
+      <div className="home-why-container">
 
-        <div className="section-title">
+        {/* ================= LEFT CONTENT ================= */}
 
-          <span>WHY INFYNEX</span>
+        <div className="home-why-content">
 
-          <h2>Why Companies Trust Us</h2>
+          <span className="home-why-badge">
+            WHY CHOOSE INFYNEX
+          </span>
 
-          <p>
-            More than a recruiter — a strategic talent partner committed
-            to your long-term success.
+          <h2 className="home-why-title">
+            Your Trusted Partner in Talent & Technology
+          </h2>
+
+          <p className="home-why-description">
+            At <strong>Infynex Global IT Solutions Pvt. Ltd.</strong>, we help
+            businesses accelerate growth through expert IT recruitment,
+            software engineering, cloud technologies, and digital
+            transformation services. Our client-first approach,
+            experienced professionals, and commitment to excellence
+            make us a trusted technology and talent partner.
           </p>
+
+          <div className="home-why-features">
+
+            {features.map((feature, index) => (
+
+              <div
+                className="home-why-feature"
+                key={index}
+              >
+
+                <div className="home-why-feature-icon">
+                  {feature.icon}
+                </div>
+
+                <span>
+                  {feature.title}
+                </span>
+
+              </div>
+
+            ))}
+
+          </div>
+
+          <Link
+            to="/about"
+            className="home-why-btn"
+          >
+            Learn More
+
+            <FaArrowRight />
+
+          </Link>
 
         </div>
 
-        <div className="why-grid">
+        {/* ================= RIGHT IMAGE ================= */}
 
-          {features.map((item, index) => (
+        <div className="home-why-image">
 
-            <div className="why-card" key={index}>
+          <img
+            src={whyImage}
+            alt="Infynex Global IT Solutions"
+          />
 
-              <div
-                className="why-icon"
-                style={{ background: item.color }}
-              >
-                {item.icon}
-              </div>
+          {/* Floating Card */}
 
-              <h3>{item.title}</h3>
+          <div className="home-why-floating-card top-card">
 
-              <p>{item.desc}</p>
+            <h4>Fast Delivery</h4>
 
-            </div>
+            <span>✔ Quick Hiring</span>
 
-          ))}
+            <span>✔ Agile Development</span>
+
+          </div>
+
+          {/* Floating Card */}
+
+          <div className="home-why-floating-card bottom-card">
+
+            <h4>End-to-End Solutions</h4>
+
+            <span>✔ IT Staffing</span>
+
+            <span>✔ Software Development</span>
+
+            <span>✔ Cloud & AI Services</span>
+
+          </div>
 
         </div>
 

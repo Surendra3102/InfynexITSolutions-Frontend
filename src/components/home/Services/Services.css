@@ -1,73 +1,160 @@
-.services{
-    padding:120px 0;
-    background:#fff;
+/*==================================================
+                HOME SERVICES
+==================================================*/
+
+.home-services{
+    padding:85px 0;
+    background:#F8FAFC;
 }
 
-.section-title{
-    text-align:center;
-    margin-bottom:70px;
-}
-
-.section-title span{
-    display:inline-block;
-    background:#E8F1FF;
-    color:#2563EB;
-    padding:10px 22px;
-    border-radius:30px;
-    font-size:14px;
-    font-weight:600;
-    margin-bottom:20px;
-}
-
-.section-title h2{
-    font-size:56px;
-    color:#0F172A;
-    margin-bottom:20px;
-}
-
-.section-title p{
-    max-width:700px;
+.home-services-container{
+    width:100%;
+    max-width:1250px;
     margin:auto;
+    padding:0 20px;
+}
+
+/*==================================================
+                HEADER
+==================================================*/
+
+.home-services-header{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.home-services-badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:8px 18px;
+
+    background:#E8F1FF;
+
+    color:#2563EB;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+    margin-bottom:18px;
+}
+
+.home-services-title{
+
+    font-size:40px;
+
+    font-weight:700;
+
+    color:#0F172A;
+
+    margin-bottom:15px;
+
+    line-height:1.25;
+}
+
+.home-services-subtitle{
+
+    max-width:720px;
+
+    margin:auto;
+
     color:#64748B;
+
+    font-size:16px;
+
     line-height:1.8;
-    font-size:18px;
 }
 
-.services-grid{
+/*==================================================
+                GRID
+==================================================*/
+
+.home-services-grid{
+
     display:grid;
+
     grid-template-columns:repeat(3,1fr);
-    gap:30px;
+
+    gap:26px;
 }
 
-.service-card{
+/*==================================================
+                CARD
+==================================================*/
+
+.home-service-card{
 
     background:#fff;
+
+    border-radius:20px;
+
+    padding:30px;
 
     border:1px solid #E5E7EB;
 
-    border-radius:22px;
+    display:flex;
 
-    padding:35px;
+    flex-direction:column;
 
-    transition:.35s;
+    justify-content:space-between;
 
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.35s ease;
 }
 
-.service-card:hover{
+.home-service-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:4px;
+
+    height:100%;
+
+    background:#2563EB;
+
+    transform:scaleY(0);
+
+    transition:.35s;
+}
+
+.home-service-card:hover{
 
     transform:translateY(-8px);
 
+    box-shadow:0 18px 40px rgba(37,99,235,.12);
+
     border-color:#2563EB;
-
-    box-shadow:0 20px 40px rgba(37,99,235,.12);
-
 }
 
-.service-icon{
+.home-service-card:hover::before{
 
-    width:58px;
+    transform:scaleY(1);
+}
 
-    height:58px;
+/*==================================================
+                ICON
+==================================================*/
+
+.home-service-icon{
+
+    width:65px;
+
+    height:65px;
 
     border-radius:18px;
 
@@ -79,85 +166,247 @@
 
     color:#fff;
 
-    font-size:22px;
+    font-size:26px;
 
-    margin-bottom:28px;
+    margin-bottom:24px;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-
+    box-shadow:0 15px 30px rgba(37,99,235,.18);
 }
 
-.service-card h3{
+/*==================================================
+                CONTENT
+==================================================*/
 
-    font-size:28px;
+.home-service-content{
+
+    flex:1;
+}
+
+.home-service-title{
+
+    font-size:22px;
+
+    font-weight:700;
 
     color:#0F172A;
 
-    margin-bottom:18px;
+    line-height:1.4;
 
+    margin-bottom:14px;
 }
 
-.service-card p{
+.home-service-description{
+
+    font-size:15px;
 
     color:#64748B;
 
     line-height:1.8;
 
     margin-bottom:28px;
-
 }
 
-.service-card a{
+/*==================================================
+                LINK
+==================================================*/
 
-    color:#2563EB;
+.home-service-link{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
 
     text-decoration:none;
 
+    color:#2563EB;
+
+    font-size:15px;
+
     font-weight:600;
 
+    padding-top:18px;
+
+    border-top:1px solid #EEF2F7;
+
     transition:.3s;
-
 }
 
-.service-card a:hover{
+.home-service-link svg{
 
-    letter-spacing:.5px;
-
+    transition:.3s;
 }
+
+.home-service-card:hover .home-service-link{
+
+    color:#1D4ED8;
+}
+
+.home-service-card:hover .home-service-link svg{
+
+    transform:translateX(6px);
+}
+
+/*==================================================
+                TABLET
+==================================================*/
 
 @media(max-width:992px){
 
-.services-grid{
+.home-services{
+
+padding:70px 0;
+
+}
+
+.home-services-title{
+
+font-size:34px;
+
+}
+
+.home-services-subtitle{
+
+font-size:15px;
+
+}
+
+.home-services-grid{
 
 grid-template-columns:repeat(2,1fr);
 
-}
-
-.section-title h2{
-
-font-size:42px;
+gap:22px;
 
 }
 
+.home-service-card{
+
+padding:26px;
+
 }
+
+}
+
+/*==================================================
+                MOBILE
+==================================================*/
 
 @media(max-width:768px){
 
-.services{
+.home-services{
 
-padding:80px 0;
+padding:60px 0;
 
 }
 
-.services-grid{
+.home-services-header{
+
+margin-bottom:40px;
+
+}
+
+.home-services-title{
+
+font-size:28px;
+
+line-height:1.35;
+
+}
+
+.home-services-subtitle{
+
+font-size:15px;
+
+line-height:1.7;
+
+}
+
+.home-services-grid{
 
 grid-template-columns:1fr;
 
+gap:18px;
+
 }
 
-.section-title h2{
+.home-service-card{
 
-font-size:34px;
+padding:24px;
+
+border-radius:16px;
+
+}
+
+.home-service-icon{
+
+width:58px;
+
+height:58px;
+
+font-size:22px;
+
+margin-bottom:20px;
+
+}
+
+.home-service-title{
+
+font-size:20px;
+
+}
+
+.home-service-description{
+
+font-size:14px;
+
+margin-bottom:22px;
+
+}
+
+.home-service-link{
+
+font-size:14px;
+
+}
+
+}
+
+/*==================================================
+                SMALL MOBILE
+==================================================*/
+
+@media(max-width:480px){
+
+.home-services-container{
+
+padding:0 16px;
+
+}
+
+.home-services-badge{
+
+font-size:12px;
+
+padding:7px 16px;
+
+}
+
+.home-services-title{
+
+font-size:24px;
+
+}
+
+.home-services-subtitle{
+
+font-size:14px;
+
+}
+
+.home-service-card{
+
+padding:20px;
 
 }
 

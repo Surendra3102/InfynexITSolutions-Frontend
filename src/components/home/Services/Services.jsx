@@ -1,92 +1,126 @@
 import "./Services.css";
+import { Link } from "react-router-dom";
 import {
   FaBriefcase,
-  FaClock,
   FaCode,
+  FaMobileAlt,
+  FaCloud,
+  FaRobot,
   FaUsers,
-  FaUserTie,
-  FaCog,
+  FaArrowRight,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
+
 const services = [
   {
     icon: <FaBriefcase />,
-    title: "Permanent Recruitment",
-    desc: "Full-time placements aligned with your organization's culture and long-term vision.",
+    title: "IT Staffing & Recruitment",
+    description:
+      "Permanent hiring, contract staffing, executive search and recruitment outsourcing for organizations of every size.",
     color: "#2563EB",
   },
   {
-    icon: <FaClock />,
-    title: "Contract Staffing",
-    desc: "Flexible workforce solutions for project-based and temporary requirements.",
-    color: "#06B6D4",
-  },
-  {
     icon: <FaCode />,
-    title: "IT Recruitment",
-    desc: "Specialized talent acquisition for software engineers and IT leaders.",
+    title: "Software Development",
+    description:
+      "Custom web applications, enterprise software, SaaS products and scalable digital solutions.",
     color: "#4F46E5",
   },
   {
+    icon: <FaMobileAlt />,
+    title: "Mobile App Development",
+    description:
+      "Android, iOS, Flutter and React Native applications built for performance and user experience.",
+    color: "#06B6D4",
+  },
+  {
+    icon: <FaCloud />,
+    title: "Cloud Solutions",
+    description:
+      "Cloud migration, DevOps, AWS, Azure infrastructure and scalable deployment services.",
+    color: "#14B8A6",
+  },
+  {
+    icon: <FaRobot />,
+    title: "AI & Automation",
+    description:
+      "Artificial Intelligence, Machine Learning and intelligent automation solutions.",
+    color: "#8B5CF6",
+  },
+  {
     icon: <FaUsers />,
-    title: "Executive Search",
-    desc: "Identify and hire experienced executives for leadership positions.",
-    color: "#7C3AED",
-  },
-  {
-    icon: <FaUserTie />,
-    title: "HR Consulting",
-    desc: "Expert HR advisory services to improve workforce performance.",
+    title: "Executive Search & RPO",
+    description:
+      "Leadership hiring, strategic talent acquisition and Recruitment Process Outsourcing.",
     color: "#F59E0B",
-  },
-  {
-    icon: <FaCog />,
-    title: "Recruitment Process Outsourcing",
-    desc: "Complete recruitment management from sourcing to onboarding.",
-    color: "#F43F5E",
   },
 ];
 
-function Services() {
+function HomeServices() {
   return (
-    <section className="services">
+    <section className="home-services">
 
-      <div className="container">
+      <div className="home-services-container">
 
-        <div className="section-title">
+        <div className="home-services-header">
 
-          <span>OUR SERVICES</span>
+          <span className="home-services-badge">
+            OUR SERVICES
+          </span>
 
-          <h2>Comprehensive Recruitment Solutions</h2>
+          <h2 className="home-services-title">
+            Talent Solutions & Digital Innovation
+          </h2>
 
-          <p>
-            From executive search to mass hiring — we cover every recruitment
-            need with precision and care.
+          <p className="home-services-subtitle">
+            Empowering businesses through expert IT recruitment,
+            software engineering, cloud technologies, AI solutions
+            and digital transformation services.
           </p>
 
         </div>
 
-        <div className="services-grid">
+        <div className="home-services-grid">
 
           {services.map((service, index) => (
-            <div className="service-card" key={index}>
+
+            <div
+              className="home-service-card"
+              key={index}
+            >
 
               <div
-                className="service-icon"
-                style={{ background: service.color }}
+                className="home-service-icon"
+                style={{
+                  background: service.color,
+                }}
               >
                 {service.icon}
               </div>
 
-              <h3>{service.title}</h3>
+              <div className="home-service-content">
 
-              <p>{service.desc}</p>
+                <h3 className="home-service-title">
+                  {service.title}
+                </h3>
 
-              <Link to="/services">
-                Learn More →
+                <p className="home-service-description">
+                  {service.description}
+                </p>
+
+              </div>
+
+              <Link
+                to="/services"
+                className="home-service-link"
+              >
+                Learn More
+
+                <FaArrowRight />
+
               </Link>
 
             </div>
+
           ))}
 
         </div>
@@ -97,4 +131,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default HomeServices;

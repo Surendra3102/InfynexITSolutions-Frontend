@@ -64,19 +64,27 @@ function EmployerForm() {
 
   return (
     <section className="employer-form-section" id="employer-form">
-      <div className="container">
+    <div className="container">
+    <div className="employer-form-wrapper">
 
-        <div className="employer-form-heading">
-          <span>REQUEST TALENT</span>
+      <div className="employer-form-info">
+        <span className="section-badge">REQUEST TALENT</span>
+        <h2>Let's Build <span>Your Dream Team</span></h2>
 
-          <h2>Let's Build Your Team Together</h2>
+        <p>
+          Whether you're hiring one specialist or building an entire department,
+          our recruitment experts help identify, screen and onboard the right professionals.
+        </p>
 
-          <p>
-            Tell us about your hiring needs and our recruitment specialists
-            will get in touch to discuss the best hiring solution for your
-            organization.
-          </p>
+     
+
+        <div className="employer-benefits">...</div>
+
+        <div className="response-card">
+          <small>Average Response Time</small>
+          <h3>Less than 24 Hours</h3>
         </div>
+      </div>
 
         <form
           className="employer-form"
@@ -207,6 +215,7 @@ function EmployerForm() {
 
         </form>
 
+      </div>
       </div>
     </section>
   );

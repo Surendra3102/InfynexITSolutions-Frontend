@@ -10,7 +10,6 @@ function About() {
       <AboutHero />
       <CompanyStory/>
       <MissionVision/>
-      <CoreValues/>
       <Journey/>
       <AboutCTA/>
     </>

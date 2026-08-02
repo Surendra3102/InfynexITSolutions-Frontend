@@ -1,0 +1,514 @@
+/*====================================================
+                HOME INDUSTRIES
+====================================================*/
+
+.home-industries{
+
+    padding:85px 0;
+
+    background:#ffffff;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/*====================================================
+                CONTAINER
+====================================================*/
+
+.home-industries-container{
+
+    max-width:1250px;
+
+    margin:auto;
+
+    padding:0 20px;
+}
+
+/*====================================================
+                HEADER
+====================================================*/
+
+.home-industries-header{
+
+    text-align:center;
+
+    max-width:760px;
+
+    margin:0 auto 60px;
+}
+
+.home-industries-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 18px;
+
+    background:#E8F1FF;
+
+    color:#2563EB;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+    margin-bottom:18px;
+}
+
+.home-industries-title{
+
+    font-size:40px;
+
+    font-weight:700;
+
+    color:#0F172A;
+
+    margin-bottom:18px;
+
+    line-height:1.25;
+}
+
+.home-industries-subtitle{
+
+    font-size:16px;
+
+    color:#64748B;
+
+    line-height:1.8;
+}
+
+/*====================================================
+                GRID
+====================================================*/
+
+.home-industries-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:24px;
+}
+
+/*====================================================
+                CARD
+====================================================*/
+
+.home-industry-card{
+
+    background:#ffffff;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:20px;
+
+    padding:28px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:0 12px 35px rgba(15,23,42,.05);
+}
+
+.home-industry-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:#2563EB;
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.35s;
+}
+
+.home-industry-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#2563EB;
+
+    box-shadow:0 22px 55px rgba(37,99,235,.12);
+}
+
+.home-industry-card:hover::before{
+
+    transform:scaleX(1);
+}
+
+/*====================================================
+                ICON
+====================================================*/
+
+.home-industry-icon{
+
+    width:72px;
+
+    height:72px;
+
+    margin:0 auto 22px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#fff;
+
+    font-size:30px;
+
+    box-shadow:0 15px 35px rgba(37,99,235,.18);
+
+    transition:.4s;
+}
+
+.home-industry-card:hover .home-industry-icon{
+
+    transform:rotate(-8deg) scale(1.08);
+}
+
+/*====================================================
+                TITLE
+====================================================*/
+
+.home-industry-title{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#0F172A;
+
+    margin-bottom:14px;
+
+    line-height:1.35;
+}
+
+/*====================================================
+                DESCRIPTION
+====================================================*/
+
+.home-industry-description{
+
+    font-size:15px;
+
+    color:#64748B;
+
+    line-height:1.8;
+
+    min-height:78px;
+}
+
+/*====================================================
+                GLOW EFFECT
+====================================================*/
+
+.home-industry-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:170px;
+
+    height:170px;
+
+    right:-70px;
+
+    top:-70px;
+
+    border-radius:50%;
+
+    background:rgba(37,99,235,.05);
+
+    filter:blur(35px);
+
+    transition:.35s;
+}
+
+.home-industry-card:hover::after{
+
+    background:rgba(37,99,235,.10);
+}
+
+/*====================================================
+                CARD HOVER
+====================================================*/
+
+.home-industry-card:hover .home-industry-title{
+
+    color:#2563EB;
+}
+
+.home-industry-card:hover .home-industry-description{
+
+    color:#475569;
+}
+
+/*====================================================
+                LIGHT BORDER
+====================================================*/
+
+.home-industry-card{
+
+    isolation:isolate;
+}
+
+.home-industry-card:hover{
+
+    background:#ffffff;
+}
+
+/*====================================================
+                SOFT ANIMATION
+====================================================*/
+
+.home-industry-card,
+.home-industry-icon,
+.home-industry-title,
+.home-industry-description{
+
+    transition:all .35s ease;
+}
+
+/*====================================================
+                LARGE TABLET
+====================================================*/
+
+@media (max-width:1100px){
+
+    .home-industries-grid{
+
+        grid-template-columns:repeat(3,1fr);
+
+        gap:22px;
+    }
+
+    .home-industry-card{
+
+        padding:24px;
+    }
+
+    .home-industry-title{
+
+        font-size:20px;
+    }
+
+}
+
+/*====================================================
+                TABLET
+====================================================*/
+
+@media (max-width:992px){
+
+    .home-industries{
+
+        padding:70px 0;
+    }
+
+    .home-industries-header{
+
+        margin-bottom:45px;
+    }
+
+    .home-industries-title{
+
+        font-size:34px;
+    }
+
+    .home-industries-subtitle{
+
+        font-size:15px;
+    }
+
+    .home-industries-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:20px;
+    }
+
+    .home-industry-card{
+
+        padding:22px;
+    }
+
+    .home-industry-icon{
+
+        width:64px;
+
+        height:64px;
+
+        font-size:26px;
+    }
+
+}
+
+/*====================================================
+                MOBILE
+====================================================*/
+
+@media (max-width:768px){
+
+    .home-industries{
+
+        padding:60px 0;
+    }
+
+    .home-industries-container{
+
+        padding:0 18px;
+    }
+
+    .home-industries-header{
+
+        margin-bottom:35px;
+    }
+
+    .home-industries-badge{
+
+        font-size:12px;
+
+        padding:7px 16px;
+    }
+
+    .home-industries-title{
+
+        font-size:28px;
+
+        line-height:1.35;
+    }
+
+    .home-industries-subtitle{
+
+        font-size:15px;
+
+        line-height:1.8;
+    }
+
+    .home-industries-grid{
+
+        grid-template-columns:1fr;
+
+        gap:18px;
+    }
+
+    .home-industry-card{
+
+        padding:22px;
+
+        border-radius:18px;
+    }
+
+    .home-industry-icon{
+
+        width:58px;
+
+        height:58px;
+
+        font-size:22px;
+
+        margin-bottom:18px;
+    }
+
+    .home-industry-title{
+
+        font-size:20px;
+
+        margin-bottom:12px;
+    }
+
+    .home-industry-description{
+
+        min-height:auto;
+
+        font-size:14px;
+
+        line-height:1.7;
+    }
+
+}
+
+/*====================================================
+                SMALL MOBILE
+====================================================*/
+
+@media (max-width:480px){
+
+    .home-industries{
+
+        padding:55px 0;
+    }
+
+    .home-industries-container{
+
+        padding:0 16px;
+    }
+
+    .home-industries-title{
+
+        font-size:24px;
+    }
+
+    .home-industries-subtitle{
+
+        font-size:14px;
+    }
+
+    .home-industry-card{
+
+        padding:20px;
+    }
+
+    .home-industry-title{
+
+        font-size:18px;
+    }
+
+    .home-industry-description{
+
+        font-size:13px;
+    }
+
+}
+
+/*====================================================
+                SMOOTH TRANSITIONS
+====================================================*/
+
+.home-industry-card,
+.home-industry-icon,
+.home-industry-title,
+.home-industry-description{
+
+    transition:all .35s ease;
+}

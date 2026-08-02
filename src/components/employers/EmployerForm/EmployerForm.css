@@ -1,217 +1,936 @@
-/*==================================
-        EMPLOYER FORM
-==================================*/
+/*====================================================
+                EMPLOYER FORM
+====================================================*/
 
 .employer-form-section{
-    padding:100px 0;
-    background:#f8fafc;
+
+    position:relative;
+
+    padding:110px 0;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at top left,#ECFDF5 0%,transparent 30%),
+        radial-gradient(circle at bottom right,#E0F2FE 0%,transparent 35%),
+        #F8FAFC;
 }
 
-.employer-form-heading{
-    text-align:center;
-    margin-bottom:60px;
+/*====================================================
+                BACKGROUND EFFECTS
+====================================================*/
+
+.employer-form-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    left:-220px;
+
+    top:-220px;
+
+    border-radius:50%;
+
+    background:rgba(16,185,129,.06);
+
+    filter:blur(90px);
+
+    animation:floatBlob1 12s ease-in-out infinite;
 }
 
-.employer-form-heading span{
-    display:inline-block;
-    padding:8px 18px;
+.employer-form-section::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    right:-180px;
+
+    bottom:-180px;
+
+    border-radius:50%;
+
+    background:rgba(14,165,233,.05);
+
+    filter:blur(80px);
+
+    animation:floatBlob2 14s ease-in-out infinite;
+}
+
+/*====================================================
+                CONTAINER
+====================================================*/
+
+.employer-form-section .container{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:0 20px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+/*====================================================
+            TWO COLUMN LAYOUT
+====================================================*/
+
+.employer-form-wrapper{
+
+    display:grid;
+
+    grid-template-columns:420px 1fr;
+
+    gap:45px;
+
+    align-items:start;
+}
+
+/*====================================================
+                LEFT PANEL
+====================================================*/
+
+.employer-form-info{
+
+    position:sticky;
+
+    top:120px;
+
+    padding:40px;
+
     border-radius:30px;
-    background:#e0ecff;
-    color:#2563eb;
+
+    background:
+        linear-gradient(
+            135deg,
+            #78e2e8,
+            #278f9f
+        );
+
+    color:#fff;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 25px 60px rgba(15,118,110,.18);
+}
+
+/*====================================================
+            GLOW EFFECT
+====================================================*/
+
+.employer-form-info::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    right:-80px;
+
+    top:-80px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.10);
+
+    filter:blur(25px);
+}
+
+/*====================================================
+                BADGE
+====================================================*/
+
+.employer-form-info .section-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 18px;
+
+    border-radius:40px;
+
+    background:rgba(255,255,255,.15);
+
+    color:#fff;
+
     font-size:13px;
-    font-weight:600;
-    letter-spacing:.5px;
+
+    font-weight:700;
+
+    letter-spacing:.8px;
+
+    margin-bottom:22px;
+}
+
+/*====================================================
+                TITLE
+====================================================*/
+
+.employer-form-info h2{
+
+    font-size:42px;
+
+    line-height:1.2;
+
+    font-weight:700;
+
     margin-bottom:18px;
+}
+
+.employer-form-info h2 span{
+
+    display:block;
+
+    color:#CCFBF1;
+}
+
+/*====================================================
+            DESCRIPTION
+====================================================*/
+
+.employer-form-info>p{
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,.88);
+
+    margin-bottom:35px;
+}
+
+/*====================================================
+                BENEFITS
+====================================================*/
+
+.employer-benefits{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    margin-bottom:35px;
+}
+
+.benefit-item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:16px;
+
+    padding:16px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    transition:.35s;
+}
+
+.benefit-item:hover{
+
+    transform:translateX(8px);
+
+    background:rgba(255,255,255,.14);
+}
+
+/*====================================================
+                ICON
+====================================================*/
+
+.benefit-icon{
+
+    width:42px;
+
+    height:42px;
+
+    min-width:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+    color:#91e1e8;
+
+    font-size:18px;
+
+    font-weight:700;
+}
+
+/*====================================================
+                BENEFIT TEXT
+====================================================*/
+
+.benefit-item h4{
+
+    font-size:17px;
+
+    font-weight:600;
+
+    margin-bottom:6px;
+
+    color:#fff;
+}
+
+.benefit-item p{
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    color:rgba(255,255,255,.85);
+}
+
+/*====================================================
+            RESPONSE CARD
+====================================================*/
+
+.response-card{
+
+    margin-top:35px;
+
+    padding:25px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.18);
+}
+
+.response-card small{
+
+    display:block;
+
+    color:rgba(255,255,255,.75);
+
+    margin-bottom:10px;
+
+    font-size:13px;
+
+    letter-spacing:.6px;
+
     text-transform:uppercase;
 }
 
-.employer-form-heading h2{
-    font-size:46px;
-    color:#0f172a;
-    margin-bottom:18px;
+.response-card h3{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    margin-bottom:8px;
 }
 
-.employer-form-heading p{
-    max-width:700px;
-    margin:auto;
-    color:#64748b;
-    line-height:1.8;
-    font-size:17px;
+.response-card span{
+
+    display:block;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    color:rgba(255,255,255,.82);
 }
 
-/*==================================
-        FORM CARD
-==================================*/
+/*====================================================
+                FORM CARD
+====================================================*/
 
 .employer-form{
-    max-width:1000px;
-    margin:auto;
-    background:#fff;
-    border-radius:24px;
-    padding:45px;
-    border:1px solid #e5e7eb;
-    box-shadow:0 20px 50px rgba(15,23,42,.06);
+
+    padding:42px;
+
+    border-radius:30px;
+
+    background:#ffffff;
+
+    box-shadow:
+        0 25px 70px rgba(15,23,42,.08);
+
+    border:1px solid #E5E7EB;
+
+    position:relative;
+
+    overflow:hidden;
 }
 
-/*==================================
-        GRID
-==================================*/
+/*====================================================
+            FORM LIGHT EFFECT
+====================================================*/
+
+.employer-form::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    top:-80px;
+
+    right:-80px;
+
+    border-radius:50%;
+
+    background:rgba(20,184,166,.08);
+
+    filter:blur(35px);
+}
+
+/*====================================================
+                GRID
+====================================================*/
 
 .employer-form-grid{
+
+    position:relative;
+
+    z-index:2;
+
     display:grid;
+
     grid-template-columns:repeat(2,1fr);
+
     gap:24px;
 }
 
-.employer-full-width{
-    grid-column:1/-1;
-}
-
-/*==================================
-        INPUTS
-==================================*/
+/*====================================================
+                INPUT GROUP
+====================================================*/
 
 .employer-input-group{
+
     display:flex;
+
     flex-direction:column;
+
+    gap:10px;
 }
 
-.employer-input-group label{
-    margin-bottom:10px;
-    color:#0f172a;
-    font-weight:600;
-    font-size:15px;
+.employer-full-width{
+
+    grid-column:1 / -1;
 }
+
+/*====================================================
+                LABEL
+====================================================*/
+
+.employer-input-group label{
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#334155;
+
+    letter-spacing:.3px;
+}
+
+/*====================================================
+                INPUTS
+====================================================*/
 
 .employer-input-group input,
 .employer-input-group select,
 .employer-input-group textarea{
+
     width:100%;
-    border:1px solid #dbe3ea;
-    border-radius:14px;
-    padding:15px 18px;
+
+    padding:16px 18px;
+
+    border:1px solid #E2E8F0;
+
+    border-radius:16px;
+
+    background:#F8FAFC;
+
+    color:#0F172A;
+
     font-size:15px;
-    outline:none;
-    transition:.3s;
+
     font-family:inherit;
-    background:#fff;
+
+    outline:none;
+
+    transition:all .35s ease;
 }
 
-.employer-input-group input{
-    height:56px;
+/*====================================================
+                PLACEHOLDER
+====================================================*/
+
+.employer-input-group input::placeholder,
+.employer-input-group textarea::placeholder{
+
+    color:#94A3B8;
 }
 
-.employer-input-group select{
-    height:56px;
-    cursor:pointer;
-}
-
-.employer-input-group textarea{
-    resize:vertical;
-    min-height:160px;
-}
+/*====================================================
+                FOCUS
+====================================================*/
 
 .employer-input-group input:focus,
 .employer-input-group select:focus,
 .employer-input-group textarea:focus{
-    border-color:#2563eb;
-    box-shadow:0 0 0 4px rgba(37,99,235,.10);
+
+    border-color:#bae9f0;
+
+    background:#ffffff;
+
+    box-shadow:
+        0 0 0 4px rgba(20,184,166,.12);
+
+    transform:translateY(-2px);
 }
 
-/*==================================
-        BUTTON
-==================================*/
+/*====================================================
+                SELECT
+====================================================*/
+
+.employer-input-group select{
+
+    cursor:pointer;
+
+    appearance:none;
+
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='%2364748B' viewBox='0 0 16 16'%3E%3Cpath d='M1.5 5.5L8 12l6.5-6.5' stroke='%2364748B' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+
+    background-repeat:no-repeat;
+
+    background-position:right 18px center;
+
+    padding-right:50px;
+}
+
+/*====================================================
+                TEXTAREA
+====================================================*/
+
+.employer-input-group textarea{
+
+    resize:vertical;
+
+    min-height:170px;
+
+    line-height:1.8;
+}
+
+/*====================================================
+                SUBMIT BUTTON
+====================================================*/
 
 .employer-submit-btn{
-    width:100%;
+
     margin-top:35px;
-    padding:18px;
+
+    width:100%;
+
+    height:58px;
+
     border:none;
-    border-radius:14px;
-    background:linear-gradient(135deg,#2563eb,#1d4ed8);
-    color:#fff;
-    font-size:16px;
-    font-weight:600;
+
+    border-radius:18px;
+
     cursor:pointer;
-    transition:.35s;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0F766E,
+            #14B8A6
+        );
+
+    box-shadow:
+        0 18px 45px rgba(15,118,110,.22);
+
+    transition:all .35s ease;
 }
 
 .employer-submit-btn:hover{
-    transform:translateY(-2px);
-    box-shadow:0 15px 35px rgba(37,99,235,.25);
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 25px 60px rgba(15,118,110,.28);
 }
 
-/*==================================
-        RESPONSIVE
-==================================*/
+.employer-submit-btn:active{
 
-@media(max-width:992px){
-
-.employer-form{
-    padding:35px;
-}
-
-.employer-form-heading h2{
-    font-size:38px;
-}
-
-}
-
-@media(max-width:768px){
-
-.employer-form-section{
-    padding:80px 0;
-}
-
-.employer-form{
-    padding:25px;
-}
-
-.employer-form-grid{
-    grid-template-columns:1fr;
-}
-
-.employer-full-width{
-    grid-column:auto;
-}
-
-.employer-form-heading{
-    margin-bottom:40px;
-}
-
-.employer-form-heading h2{
-    font-size:32px;
-}
-
-.employer-form-heading p{
-    font-size:16px;
-}
-
-}
-
-@media(max-width:480px){
-
-.employer-form{
-    padding:20px;
-    border-radius:18px;
-}
-
-.employer-form-heading h2{
-    font-size:28px;
-}
-
-.employer-input-group input,
-.employer-input-group select{
-    height:52px;
-}
-
-.employer-submit-btn{
-    padding:16px;
-}
-
+    transform:translateY(-1px);
 }
 
 .employer-submit-btn:disabled{
-    opacity:0.7;
+
     cursor:not-allowed;
+
+    opacity:.75;
+
+    transform:none;
+
+    box-shadow:none;
+}
+
+/*====================================================
+                FORM ANIMATION
+====================================================*/
+
+.employer-form{
+
+    animation:formFade .8s ease;
+}
+
+@keyframes formFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*====================================================
+                TABLET
+====================================================*/
+
+@media (max-width:992px){
+
+    .employer-form-section{
+
+        padding:80px 0;
+    }
+
+    .employer-form-wrapper{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+    }
+
+    .employer-form-info{
+
+        position:relative;
+
+        top:0;
+
+        padding:35px;
+    }
+
+    .employer-form{
+
+        padding:35px;
+    }
+
+    .employer-form-grid{
+
+        gap:20px;
+    }
+
+}
+
+/*====================================================
+                MOBILE
+====================================================*/
+
+@media (max-width:768px){
+
+    .employer-form-section{
+
+        padding:60px 0;
+    }
+
+    .employer-form-section .container{
+
+        padding:0 18px;
+    }
+
+    .employer-form-wrapper{
+
+        gap:30px;
+    }
+
+    .employer-form-info{
+
+        padding:30px;
+
+        border-radius:24px;
+    }
+
+    .employer-form-info h2{
+
+        font-size:32px;
+    }
+
+    .employer-form-info>p{
+
+        font-size:15px;
+    }
+
+    .benefit-item{
+
+        padding:15px;
+    }
+
+    .benefit-icon{
+
+        width:38px;
+
+        height:38px;
+
+        min-width:38px;
+    }
+
+    .response-card{
+
+        padding:20px;
+    }
+
+    .response-card h3{
+
+        font-size:24px;
+    }
+
+    .employer-form{
+
+        padding:28px;
+
+        border-radius:24px;
+    }
+
+    .employer-form-grid{
+
+        grid-template-columns:1fr;
+
+        gap:18px;
+    }
+
+    .employer-full-width{
+
+        grid-column:auto;
+    }
+
+    .employer-input-group input,
+    .employer-input-group select,
+    .employer-input-group textarea{
+
+        padding:15px 16px;
+    }
+
+    .employer-submit-btn{
+
+        height:55px;
+    }
+
+}
+
+/*====================================================
+                SMALL MOBILE
+====================================================*/
+
+@media (max-width:480px){
+
+    .employer-form-section{
+
+        padding:50px 0;
+    }
+
+    .employer-form-section .container{
+
+        padding:0 16px;
+    }
+
+    .employer-form-info{
+
+        padding:24px;
+
+        border-radius:20px;
+    }
+
+    .employer-form-info .section-badge{
+
+        font-size:12px;
+
+        padding:7px 15px;
+    }
+
+    .employer-form-info h2{
+
+        font-size:26px;
+    }
+
+    .employer-form-info>p{
+
+        font-size:14px;
+    }
+
+    .benefit-item{
+
+        gap:12px;
+
+        padding:14px;
+    }
+
+    .benefit-item h4{
+
+        font-size:15px;
+    }
+
+    .benefit-item p{
+
+        font-size:13px;
+    }
+
+    .response-card{
+
+        padding:18px;
+    }
+
+    .response-card h3{
+
+        font-size:21px;
+    }
+
+    .response-card span{
+
+        font-size:13px;
+    }
+
+    .employer-form{
+
+        padding:22px;
+
+        border-radius:20px;
+    }
+
+    .employer-input-group label{
+
+        font-size:13px;
+    }
+
+    .employer-input-group input,
+    .employer-input-group select,
+    .employer-input-group textarea{
+
+        font-size:14px;
+
+        border-radius:14px;
+    }
+
+    .employer-input-group textarea{
+
+        min-height:140px;
+    }
+
+    .employer-submit-btn{
+
+        height:52px;
+
+        font-size:15px;
+
+        border-radius:14px;
+    }
+
+}
+
+/*====================================================
+            FLOATING BACKGROUND
+====================================================*/
+
+@keyframes floatBlob1{
+
+    0%,100%{
+
+        transform:translateY(0px);
+    }
+
+    50%{
+
+        transform:translateY(30px);
+    }
+
+}
+
+@keyframes floatBlob2{
+
+    0%,100%{
+
+        transform:translateX(0px);
+    }
+
+    50%{
+
+        transform:translateX(-30px);
+    }
+
+}
+
+/*====================================================
+            GLOBAL TRANSITIONS
+====================================================*/
+
+.employer-form,
+.employer-form-info,
+.benefit-item,
+.response-card,
+.employer-input-group input,
+.employer-input-group select,
+.employer-input-group textarea,
+.employer-submit-btn{
+
+    transition:all .35s ease;
 }

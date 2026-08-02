@@ -6,7 +6,9 @@ import Footer from "./components/common/Footer/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
+import Industries from "./pages/Industries";
 import Contact from "./pages/Contact";
+import Careers from "./pages/Careers";
 import Employers from "./pages/Employers";
 
 
@@ -36,21 +38,21 @@ function App() {
 
         <Route path="/services" element={<Services />} />
 
+        <Route path="/industries" element={<Industries />} />
+
         <Route path="/contact" element={<Contact />} />
 
         <Route path="/employers" element={<Employers />} />
 
-
-        
-
+        <Route path="/careers" element={<Careers />} />
 
         <Route path="/login" element={<Login />} />
+
         <Route path="/register" element={<Register />} />
+
         <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route
-          path="/reset-password/:uid/:token"
-          element={<ResetPassword />}
-        />
+        
+        <Route path="/reset-password/:uid/:token" element={<ResetPassword />} />
 
       </Routes>
 

@@ -1,9 +1,10 @@
 import "./Journey.css";
 import {
   FiFlag,
-  FiBriefcase,
-  FiMapPin,
-  FiTrendingUp,
+  FiUsers,
+  FiCode,
+  FiCloud,
+  FiGlobe,
 } from "react-icons/fi";
 
 const journeyData = [
@@ -12,28 +13,35 @@ const journeyData = [
     title: "Company Founded",
     icon: <FiFlag />,
     description:
-      "Infynex IT Solutions was established with a vision to simplify recruitment through trust, transparency, and innovation.",
+      "Infynex Global IT Solutions Pvt. Ltd. was established with a vision to empower businesses through exceptional talent and innovative technology solutions.",
   },
   {
     year: "2026",
-    title: "Recruitment Services Started",
-    icon: <FiBriefcase />,
+    title: "IT Recruitment Services",
+    icon: <FiUsers />,
     description:
-      "Started delivering IT and Non-IT recruitment solutions for startups, SMEs, and growing businesses.",
+      "Started delivering end-to-end IT staffing, permanent hiring, contract staffing, executive search, and recruitment solutions for startups, SMEs, and enterprises.",
+  },
+  {
+    year: "Growth",
+    title: "Software Development",
+    icon: <FiCode />,
+    description:
+      "Expanded into custom software development, web applications, mobile applications, enterprise solutions, and API development for modern businesses.",
+  },
+  {
+    year: "Today",
+    title: "Cloud & Digital Solutions",
+    icon: <FiCloud />,
+    description:
+      "Helping organizations embrace cloud technologies, AI, automation, and digital transformation through scalable technology solutions.",
   },
   {
     year: "Future",
-    title: "Expansion Across India",
-    icon: <FiMapPin />,
+    title: "Global Expansion",
+    icon: <FiGlobe />,
     description:
-      "Building a nationwide recruitment network connecting employers with skilled professionals.",
-  },
-  {
-    year: "Vision",
-    title: "Long-Term Growth",
-    icon: <FiTrendingUp />,
-    description:
-      "Continuously expanding our services, technology, and partnerships to become a trusted recruitment brand.",
+      "Our vision is to become a globally trusted partner for IT talent, software development, and digital transformation services.",
   },
 ];
 
@@ -41,20 +49,22 @@ function Journey() {
   return (
     <section className="journey-section">
 
-      <div className="container">
+      <div className="journey-container">
 
         <div className="journey-header">
 
-          <span className="section-badge">
+          <span className="journey-badge">
             OUR JOURNEY
           </span>
 
-          <h2>Growing with Purpose</h2>
+          <h2 className="journey-title">
+            Growing Through Talent & Technology
+          </h2>
 
-          <p>
-            Every milestone reflects our commitment to connecting businesses
-            with exceptional talent while creating meaningful career
-            opportunities.
+          <p className="journey-subtitle">
+            Every milestone reflects our commitment to helping businesses
+            grow through world-class IT recruitment, innovative software
+            development, and long-term technology partnerships.
           </p>
 
         </div>
@@ -66,18 +76,30 @@ function Journey() {
             <div className="journey-item" key={index}>
 
               <div className="journey-circle">
+
                 {item.icon}
+
               </div>
 
               <div className="journey-card">
 
                 <span className="journey-year">
+
                   {item.year}
+
                 </span>
 
-                <h3>{item.title}</h3>
+                <h3>
 
-                <p>{item.description}</p>
+                  {item.title}
+
+                </h3>
+
+                <p>
+
+                  {item.description}
+
+                </p>
 
               </div>
 

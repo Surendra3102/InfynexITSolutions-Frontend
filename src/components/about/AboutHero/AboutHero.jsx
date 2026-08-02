@@ -1,30 +1,106 @@
 import "./AboutHero.css";
 
+import { Link } from "react-router-dom";
+
+import {
+  FaArrowRight,
+  FaBuilding,
+} from "react-icons/fa";
+
+import heroImage from "../../../assets/about-hero.png";
+
 function AboutHero() {
   return (
     <section className="about-hero">
 
-      <div className="container">
+      <div className="about-hero-container">
 
-        <span className="section-badge">
-          ABOUT INFYNEX
-        </span>
+        {/* Left */}
 
-        <h1>
-          Connecting Talent,
-          <br />
-          <span>Creating Opportunities</span>
-        </h1>
+        <div className="about-hero-content">
 
-        <p>
-          Infynex IT Solutions is a modern recruitment and staffing company
-          committed to connecting talented professionals with forward-thinking
-          organizations.
-          <br /><br />
-          We specialize in helping businesses build high-performing teams while
-          empowering job seekers to achieve meaningful career growth through
-          reliable and transparent hiring solutions.
-        </p>
+          <span className="about-hero-badge">
+            ABOUT INFYNEX
+          </span>
+
+          <h1 className="about-hero-title">
+            Your Growth Partner in
+            <span> Talent & Technology</span>
+          </h1>
+
+          <p className="about-hero-description">
+
+            At <strong>Infynex Global IT Solutions Pvt. Ltd.</strong>,
+            we believe every successful business is built on
+            exceptional people and innovative technology.
+
+            We help startups, SMEs and enterprises accelerate
+            growth through IT staffing, recruitment,
+            software development and digital transformation.
+
+          </p>
+
+          <div className="about-hero-buttons">
+
+            <Link
+              to="/contact"
+              className="about-primary-btn"
+            >
+              Contact Us
+
+              <FaArrowRight />
+
+            </Link>
+
+            <Link
+              to="/services"
+              className="about-secondary-btn"
+            >
+              Our Services
+            </Link>
+
+          </div>
+
+          <div className="about-hero-highlights">
+
+            <div>
+
+              <FaBuilding />
+
+              <span>IT Staffing</span>
+
+            </div>
+
+            <div>
+
+              <FaBuilding />
+
+              <span>Software Development</span>
+
+            </div>
+
+            <div>
+
+              <FaBuilding />
+
+              <span>Cloud Solutions</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* Right */}
+
+        <div className="about-hero-image">
+
+          <img
+            src={heroImage}
+            alt="About Infynex"
+          />
+
+        </div>
 
       </div>
 

@@ -1,39 +1,71 @@
 import "./AboutCTA.css";
 import { Link } from "react-router-dom";
-import { FiArrowRight } from "react-icons/fi";
+import { FaArrowRight, FaCheckCircle } from "react-icons/fa";
 
 function AboutCTA() {
   return (
     <section className="about-cta">
 
-      <div className="container">
+      <div className="about-cta-container">
 
         <div className="about-cta-content">
 
-          <span className="section-badge">
-            LET'S WORK TOGETHER
+          <span className="about-cta-badge">
+            LET'S CONNECT
           </span>
 
-          <h2>
-            Ready to Build Your Team or Find Your Dream Job?
+          <h2 className="about-cta-title">
+            Ready to Partner with Infynex?
           </h2>
 
-          <p>
-            Whether you're looking to hire exceptional talent or searching for
-            your next career opportunity, Infynex Global IT Solutions is here
-            to make the journey simple, efficient, and successful.
+          <p className="about-cta-description">
+            Whether you're looking for skilled IT professionals,
+            innovative software solutions, or a trusted technology
+            partner, our team is ready to help your business grow.
+            Let's build scalable solutions and long-term success together.
           </p>
 
           <div className="about-cta-buttons">
 
-            <Link to="/employers" className="primary-btn">
-              Hire Talent
-              <FiArrowRight />
+            <Link
+              to="/contact"
+              className="about-cta-primary"
+            >
+              Contact Us
+              <FaArrowRight />
             </Link>
 
-            <Link to="/contact" className="secondary-btn">
-              Find Jobs 
+            <Link
+              to="/services"
+              className="about-cta-secondary"
+            >
+              Explore Services
+              <FaArrowRight />
             </Link>
+
+          </div>
+
+          <div className="about-cta-features">
+
+            <div>
+              <FaCheckCircle />
+              <span>IT Recruitment</span>
+            </div>
+
+            <div>
+              <FaCheckCircle />
+              <span>Software Development</span>
+            </div>
+
+            <div>
+              <FaCheckCircle />
+              <span>Cloud Solutions</span>
+            </div>
+
+            <div>
+              <FaCheckCircle />
+              <span>Digital Transformation</span>
+            </div>
 
           </div>
 

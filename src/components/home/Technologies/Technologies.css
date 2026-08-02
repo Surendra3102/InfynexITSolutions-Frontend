@@ -1,0 +1,591 @@
+/*====================================================
+                HOME TECHNOLOGIES
+====================================================*/
+
+.home-technologies{
+
+    padding:85px 0;
+
+    background:#F8FAFC;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/*====================================================
+                CONTAINER
+====================================================*/
+
+.home-technologies-container{
+
+    max-width:1250px;
+
+    margin:auto;
+
+    padding:0 20px;
+}
+
+/*====================================================
+                HEADER
+====================================================*/
+
+.home-technologies-header{
+
+    text-align:center;
+
+    max-width:760px;
+
+    margin:0 auto 60px;
+}
+
+.home-technologies-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 18px;
+
+    background:#E8F1FF;
+
+    color:#2563EB;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+    margin-bottom:18px;
+}
+
+.home-technologies-title{
+
+    font-size:40px;
+
+    font-weight:700;
+
+    color:#0F172A;
+
+    margin-bottom:18px;
+
+    line-height:1.25;
+}
+
+.home-technologies-subtitle{
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    color:#64748B;
+}
+
+/*====================================================
+                GRID
+====================================================*/
+
+.home-technologies-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+}
+
+/*====================================================
+                CARD
+====================================================*/
+
+.home-technology-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    border:1px solid #E5E7EB;
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:0 18px 45px rgba(15,23,42,.05);
+}
+
+.home-technology-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:#2563EB;
+
+    transform:scaleX(0);
+
+    transition:.35s;
+
+    transform-origin:left;
+}
+
+.home-technology-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#2563EB;
+
+    box-shadow:0 25px 60px rgba(37,99,235,.12);
+}
+
+.home-technology-card:hover::before{
+
+    transform:scaleX(1);
+}
+
+/*====================================================
+                ICON
+====================================================*/
+
+.home-technology-icon{
+
+    width:68px;
+
+    height:68px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#fff;
+
+    font-size:28px;
+
+    margin-bottom:24px;
+
+    box-shadow:0 15px 35px rgba(37,99,235,.20);
+
+    transition:.35s;
+}
+
+.home-technology-card:hover .home-technology-icon{
+
+    transform:rotate(-8deg) scale(1.08);
+}
+
+/*====================================================
+                TITLE
+====================================================*/
+
+.home-technology-title{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#0F172A;
+
+    margin-bottom:22px;
+}
+
+/*====================================================
+                TECHNOLOGY LIST
+====================================================*/
+
+.home-technology-list{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0 0 28px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+}
+
+.home-technology-list li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:15px;
+
+    color:#475569;
+
+    transition:.30s;
+}
+
+.home-technology-list li:hover{
+
+    color:#2563EB;
+
+    transform:translateX(5px);
+}
+
+/*====================================================
+                BULLET
+====================================================*/
+
+.home-tech-dot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#2563EB;
+
+    flex-shrink:0;
+
+    position:relative;
+}
+
+.home-tech-dot::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-4px;
+
+    border-radius:50%;
+
+    border:2px solid rgba(37,99,235,.18);
+}
+
+/*====================================================
+                FOOTER
+====================================================*/
+
+.home-technology-footer{
+
+    margin-top:auto;
+
+    padding-top:18px;
+
+    border-top:1px solid #EEF2F7;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    color:#2563EB;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.35s;
+}
+
+.home-technology-footer svg{
+
+    transition:.35s;
+}
+
+.home-technology-card:hover .home-technology-footer svg{
+
+    transform:translateX(6px);
+}
+
+/*====================================================
+                BACKGROUND GLOW
+====================================================*/
+
+.home-technology-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    top:-70px;
+
+    right:-70px;
+
+    background:rgba(37,99,235,.05);
+
+    filter:blur(30px);
+
+    transition:.35s;
+}
+
+.home-technology-card:hover::after{
+
+    background:rgba(37,99,235,.12);
+}
+
+/*====================================================
+                LARGE TABLET
+====================================================*/
+
+@media (max-width:1100px){
+
+    .home-technologies-grid{
+
+        gap:22px;
+    }
+
+    .home-technology-card{
+
+        padding:26px;
+    }
+
+}
+
+/*====================================================
+                TABLET
+====================================================*/
+
+@media (max-width:992px){
+
+    .home-technologies{
+
+        padding:70px 0;
+    }
+
+    .home-technologies-header{
+
+        margin-bottom:45px;
+    }
+
+    .home-technologies-title{
+
+        font-size:34px;
+    }
+
+    .home-technologies-subtitle{
+
+        font-size:15px;
+    }
+
+    .home-technologies-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:22px;
+    }
+
+    .home-technology-card{
+
+        padding:24px;
+    }
+
+    .home-technology-icon{
+
+        width:62px;
+
+        height:62px;
+
+        font-size:24px;
+    }
+
+    .home-technology-title{
+
+        font-size:20px;
+    }
+
+}
+
+/*====================================================
+                MOBILE
+====================================================*/
+
+@media (max-width:768px){
+
+    .home-technologies{
+
+        padding:60px 0;
+    }
+
+    .home-technologies-container{
+
+        padding:0 18px;
+    }
+
+    .home-technologies-header{
+
+        margin-bottom:35px;
+    }
+
+    .home-technologies-badge{
+
+        font-size:12px;
+
+        padding:7px 16px;
+    }
+
+    .home-technologies-title{
+
+        font-size:28px;
+
+        line-height:1.35;
+    }
+
+    .home-technologies-subtitle{
+
+        font-size:15px;
+
+        line-height:1.8;
+    }
+
+    .home-technologies-grid{
+
+        grid-template-columns:1fr;
+
+        gap:18px;
+    }
+
+    .home-technology-card{
+
+        padding:22px;
+
+        border-radius:18px;
+    }
+
+    .home-technology-icon{
+
+        width:58px;
+
+        height:58px;
+
+        font-size:22px;
+
+        margin-bottom:18px;
+    }
+
+    .home-technology-title{
+
+        font-size:20px;
+
+        margin-bottom:18px;
+    }
+
+    .home-technology-list{
+
+        gap:12px;
+
+        margin-bottom:22px;
+    }
+
+    .home-technology-list li{
+
+        font-size:14px;
+    }
+
+    .home-tech-dot{
+
+        width:8px;
+
+        height:8px;
+    }
+
+    .home-tech-dot::after{
+
+        inset:-3px;
+    }
+
+    .home-technology-footer{
+
+        font-size:14px;
+
+        padding-top:15px;
+    }
+
+}
+
+/*====================================================
+                SMALL MOBILE
+====================================================*/
+
+@media (max-width:480px){
+
+    .home-technologies{
+
+        padding:55px 0;
+    }
+
+    .home-technologies-container{
+
+        padding:0 16px;
+    }
+
+    .home-technologies-title{
+
+        font-size:24px;
+    }
+
+    .home-technologies-subtitle{
+
+        font-size:14px;
+    }
+
+    .home-technology-card{
+
+        padding:20px;
+    }
+
+    .home-technology-title{
+
+        font-size:18px;
+    }
+
+    .home-technology-list li{
+
+        font-size:13px;
+    }
+
+    .home-technology-footer{
+
+        font-size:13px;
+    }
+
+}
+
+/*====================================================
+                SMOOTH ANIMATIONS
+====================================================*/
+
+.home-technology-card,
+.home-technology-icon,
+.home-technology-list li,
+.home-technology-footer,
+.home-tech-dot{
+
+    transition:all .35s ease;
+}

@@ -1,86 +1,126 @@
 import "./WhyChoose.css";
+
 import {
-  FiClock,
-  FiCheckCircle,
-  FiUsers,
-  FiGlobe,
-  FiHeadphones,
-  FiTrendingUp,
-} from "react-icons/fi";
+  FaUserTie,
+  FaUsers,
+  FaBolt,
+  FaCheckCircle,
+  FaCode,
+  FaDollarSign,
+  FaComments,
+  FaHeadset,
+} from "react-icons/fa";
 
 const features = [
   {
-    icon: <FiClock />,
-    title: "Faster Hiring",
+    icon: <FaUserTie />,
+    title: "Experienced Recruitment Specialists",
     description:
-      "Quick turnaround time to help you fill critical positions without delays.",
+      "Dedicated recruitment experts with industry knowledge and proven hiring experience.",
   },
   {
-    icon: <FiCheckCircle />,
-    title: "Quality Screening",
+    icon: <FaUsers />,
+    title: "Large IT Talent Pool",
     description:
-      "Every candidate is carefully evaluated to match your business requirements.",
+      "Access to a wide network of highly skilled technology professionals across multiple domains.",
   },
   {
-    icon: <FiUsers />,
-    title: "Expert Recruiters",
+    icon: <FaBolt />,
+    title: "Fast Turnaround Time",
     description:
-      "Experienced hiring specialists with expertise across multiple industries.",
+      "Efficient hiring and project delivery to help businesses move faster.",
   },
   {
-    icon: <FiGlobe />,
-    title: "PAN India Hiring",
+    icon: <FaCheckCircle />,
+    title: "Quality-Driven Process",
     description:
-      "Connecting businesses with top talent from across India.",
+      "Every candidate and solution goes through a structured quality assessment.",
   },
   {
-    icon: <FiHeadphones />,
-    title: "Dedicated Support",
+    icon: <FaCode />,
+    title: "Agile Development",
     description:
-      "Personalized recruitment assistance throughout your hiring journey.",
+      "Modern development practices focused on flexibility, collaboration, and rapid delivery.",
   },
   {
-    icon: <FiTrendingUp />,
-    title: "Scalable Solutions",
+    icon: <FaDollarSign />,
+    title: "Cost-Effective Engagement",
     description:
-      "Flexible hiring solutions that grow with your organization's needs.",
+      "Flexible engagement models that maximize value while optimizing project costs.",
+  },
+  {
+    icon: <FaComments />,
+    title: "Transparent Communication",
+    description:
+      "Clear collaboration with regular updates throughout recruitment and development.",
+  },
+  {
+    icon: <FaHeadset />,
+    title: "Dedicated Customer Support",
+    description:
+      "Reliable support before, during, and after every engagement.",
   },
 ];
 
 function WhyChoose() {
   return (
-    <section className="why-choose">
-      <div className="container">
+    <section className="service-why-section">
 
-        <span className="section-badge">
-          WHY CHOOSE US
-        </span>
+      <div className="service-why-container">
 
-        <h2 className="section-title">
-          Why Choose <span>Infynex</span>
-        </h2>
+        <div className="service-why-header">
 
-        <p className="section-description">
-          We help organizations build high-performing teams through
-          efficient recruitment, expert guidance, and dependable hiring
-          solutions tailored to every business.
-        </p>
+          <span className="service-why-badge">
+            WHY CHOOSE INFYNEX
+          </span>
 
-        <div className="why-grid">
+          <h2 className="service-why-title">
+            Trusted Partner for Talent & Technology
+          </h2>
+
+          <p className="service-why-description">
+            We combine recruitment expertise with software engineering
+            excellence to help organizations build stronger teams,
+            deliver innovative digital solutions, and achieve sustainable growth.
+          </p>
+
+        </div>
+
+        <div className="service-why-grid">
+
           {features.map((item, index) => (
-            <div className="why-card" key={index}>
-              <div className="why-icon">
+
+            <div
+              className="service-why-card"
+              key={index}
+            >
+
+              <div className="service-why-icon">
+
                 {item.icon}
+
               </div>
 
-              <h3>{item.title}</h3>
+              <h3>
 
-              <p>{item.description}</p>
+                {item.title}
+
+              </h3>
+
+              <p>
+
+                {item.description}
+
+              </p>
+
             </div>
+
           ))}
+
         </div>
 
       </div>
+
     </section>
   );
 }

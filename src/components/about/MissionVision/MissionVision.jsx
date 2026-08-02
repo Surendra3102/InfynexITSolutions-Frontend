@@ -1,66 +1,135 @@
 import "./MissionVision.css";
-import { FiTarget, FiEye } from "react-icons/fi";
 
-function MissionVision() {
+import {
+  FaEye,
+  FaBullseye,
+  FaHandshake,
+  FaLightbulb,
+  FaUsers,
+  FaAward,
+  FaShieldAlt,
+  FaGraduationCap,
+} from "react-icons/fa";
+
+const values = [
+  {
+    icon: <FaShieldAlt />,
+    title: "Integrity",
+  },
+  {
+    icon: <FaLightbulb />,
+    title: "Innovation",
+  },
+  {
+    icon: <FaUsers />,
+    title: "Customer Success",
+  },
+  {
+    icon: <FaAward />,
+    title: "Excellence",
+  },
+  {
+    icon: <FaHandshake />,
+    title: "Transparency",
+  },
+  {
+    icon: <FaGraduationCap />,
+    title: "Continuous Learning",
+  },
+];
+
+function VisionMission() {
   return (
-    <section className="mission-vision">
+    <section className="vision-mission">
 
-      <div className="container">
+      <div className="vision-mission-container">
 
-        <div className="mission-heading">
+        <div className="vision-mission-header">
 
-          <span className="section-badge">
+          <span className="vision-mission-badge">
             OUR PURPOSE
           </span>
 
-          <h2>
-            Mission & Vision
+          <h2 className="vision-mission-title">
+            Vision, Mission & Core Values
           </h2>
 
-          <p>
-            Guided by our purpose and driven by innovation, we help businesses
-            find exceptional talent while empowering professionals to build
-            successful careers.
+          <p className="vision-mission-subtitle">
+            Everything we do is guided by a clear vision,
+            a meaningful mission, and values that define
+            who we are as an organization.
           </p>
 
         </div>
 
-        <div className="mission-grid">
+        <div className="vision-mission-grid">
 
-          {/* Mission Card */}
-
-          <div className="mission-card">
-
-            <div className="mission-icon">
-              <FiTarget />
-            </div>
-
-            <h3>Our Mission</h3>
-
-            <p>
-              To simplify recruitment by connecting organizations with skilled
-              professionals through transparent, efficient, and technology-driven
-              hiring solutions while helping individuals build rewarding careers.
-            </p>
-
-          </div>
-
-          {/* Vision Card */}
+          {/* Vision */}
 
           <div className="vision-card">
 
-            <div className="mission-icon">
-              <FiEye />
+            <div className="vision-icon">
+
+              <FaEye />
+
             </div>
 
             <h3>Our Vision</h3>
 
             <p>
-              To become one of India's most trusted recruitment partners by
-              building long-term relationships, delivering exceptional hiring
-              experiences, and creating opportunities that help businesses and
-              professionals grow together.
+              To become a globally trusted partner
+              for IT talent and digital transformation.
             </p>
+
+          </div>
+
+          {/* Mission */}
+
+          <div className="mission-card">
+
+            <div className="mission-icon">
+
+              <FaBullseye />
+
+            </div>
+
+            <h3>Our Mission</h3>
+
+            <p>
+              To connect businesses with exceptional
+              talent while delivering innovative
+              technology solutions that create
+              long-term value.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div className="core-values">
+
+          <h3 className="core-values-title">
+
+            Core Values
+
+          </h3>
+
+          <div className="core-values-grid">
+
+            {values.map((item, index) => (
+
+              <div
+                key={index}
+                className="core-value-card"
+              >
+
+                {item.icon}
+
+                <span>{item.title}</span>
+
+              </div>
+
+            ))}
 
           </div>
 
@@ -72,4 +141,4 @@ function MissionVision() {
   );
 }
 
-export default MissionVision;
+export default VisionMission;

@@ -50,8 +50,16 @@ function MobileMenu({
             Services
           </NavLink>
 
+          <NavLink to="/industries" onCick={closeMenu}>
+            Industries
+          </NavLink>
+
           <NavLink to="/employers" onClick={closeMenu}>
             Employers
+          </NavLink>
+
+          <NavLink to="/careers" onClick={closeMenu}>
+            Careers
           </NavLink>
 
           <NavLink to="/contact" onClick={closeMenu}>
