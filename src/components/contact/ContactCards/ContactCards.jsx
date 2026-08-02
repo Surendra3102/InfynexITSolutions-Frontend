@@ -28,7 +28,7 @@ function ContactCards() {
 
           <div className="contact-card-content">
             <span>Email Us</span>
-            <h3>hr@infynexglobal.com</h3>
+            <h3>info@infynex.com</h3>
             <p>We'll reply within 24 hours</p>
           </div>
 
@@ -42,7 +42,7 @@ function ContactCards() {
 
           <div className="contact-card-content">
             <span>Office</span>
-            <h3>Kukatpally</h3>
+            <h3>Madhapur</h3>
             <p>Hyderabad, Telangana</p>
           </div>
 

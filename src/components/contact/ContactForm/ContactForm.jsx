@@ -197,7 +197,7 @@ function ContactForm() {
             <FiMail />
             <div>
               <h4>Email</h4>
-              <span>hr@infynexglobal.com</span>
+              <span>hr@infynex.com</span>
             </div>
           </div>
 
@@ -205,7 +205,7 @@ function ContactForm() {
             <FiMapPin />
             <div>
               <h4>Office</h4>
-              <span>Kukatpally, Hyderabad, Telangana</span>
+              <span>Madhapur, Hyderabad, Telangana</span>
             </div>
           </div>
 
