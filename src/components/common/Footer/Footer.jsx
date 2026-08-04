@@ -141,7 +141,7 @@ function Footer() {
 
               <span>
 
-                info@infynex.com
+                info@infynexit.com
 
               </span>
 

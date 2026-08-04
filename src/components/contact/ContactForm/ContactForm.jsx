@@ -197,7 +197,7 @@ function ContactForm() {
             <FiMail />
             <div>
               <h4>Email</h4>
-              <span>hr@infynex.com</span>
+              <span>hr@infynexit.com</span>
             </div>
           </div>
 
