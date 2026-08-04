@@ -86,32 +86,7 @@ const industries = [
       "Recruitment",
     ],
   },
-  {
-    name: "Manufacturing",
-    icon: <FaIndustry />,
-    image: manufacturingImage,
-    description:
-      "ERP implementation, automation systems and engineering workforce solutions.",
-    services: [
-      "ERP Solutions",
-      "Automation",
-      "Industrial Software",
-      "Engineering Hiring",
-    ],
-  },
-  {
-    name: "Logistics",
-    icon: <FaTruckMoving />,
-    image: logisticsImage,
-    description:
-      "Digital logistics platforms and supply chain optimization.",
-    services: [
-      "Supply Chain",
-      "Fleet Management",
-      "Cloud",
-      "Recruitment",
-    ],
-  },
+  
   {
     name: "Telecommunications",
     icon: <FaBroadcastTower />,
@@ -148,45 +123,6 @@ const industries = [
       "Insurance Software",
       "Automation",
       "Cloud",
-      "Recruitment",
-    ],
-  },
-  {
-    name: "Pharmaceutical",
-    icon: <FaPills />,
-    image: pharmaImage,
-    description:
-      "Digital healthcare applications and pharmaceutical technology.",
-    services: [
-      "Healthcare Tech",
-      "Compliance",
-      "Software",
-      "Recruitment",
-    ],
-  },
-  {
-    name: "Automotive",
-    icon: <FaCar />,
-    image: automotiveImage,
-    description:
-      "Connected mobility platforms and enterprise software solutions.",
-    services: [
-      "Enterprise Apps",
-      "IoT",
-      "Cloud",
-      "Engineering Hiring",
-    ],
-  },
-  {
-    name: "Government",
-    icon: <FaLandmark />,
-    image: governmentImage,
-    description:
-      "Reliable digital transformation and workforce solutions.",
-    services: [
-      "Digital Services",
-      "Cloud",
-      "Cyber Security",
       "Recruitment",
     ],
   },
