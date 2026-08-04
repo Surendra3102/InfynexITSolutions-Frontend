@@ -151,15 +151,7 @@ function Technologies() {
 
               {/* Footer */}
 
-              <div className="home-technology-footer">
-
-                <span>
-                  Modern Solutions
-                </span>
-
-                <FaArrowRight />
-
-              </div>
+        
 
             </div>
 

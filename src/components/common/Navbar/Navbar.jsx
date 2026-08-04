@@ -2,118 +2,43 @@ import "./Navbar.css";
 
 import {
   NavLink,
-  useNavigate,
   useLocation,
 } from "react-router-dom";
 
 import { FaBars } from "react-icons/fa";
-import { FaCircleUser } from "react-icons/fa6";
 
 import {
   useState,
   useEffect,
-  useContext,
-  useRef,
 } from "react";
+
+
 
 import logo from "../../../assets/navlogohd.png";
 
-import { AuthContext } from "../../../context/AuthContext";
-
 import MobileMenu from "./MobileMenu";
-import ProfileDropdown from "./ProfileDropdown";
 
 function Navbar() {
+
   const [menuOpen, setMenuOpen] = useState(false);
-  const [showDropdown, setShowDropdown] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
 
-  const dropdownRef = useRef(null);
-
-  const navigate = useNavigate();
   const location = useLocation();
 
-  const { user, logout } = useContext(AuthContext);
-
   /* =============================
-     Scroll Effect
-  ============================== */
+      Close Mobile Menu
+  ============================= */
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
 
-    window.addEventListener("scroll", handleScroll);
-
-    return () =>
-      window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  /* =============================
-     Close Profile Dropdown
-  ============================== */
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target)
-      ) {
-        setShowDropdown(false);
-      }
-    };
-
-    document.addEventListener(
-      "mousedown",
-      handleClickOutside
-    );
-
-    return () =>
-      document.removeEventListener(
-        "mousedown",
-        handleClickOutside
-      );
-  }, []);
-
-  /* =============================
-     Close Mobile Menu on Route Change
-  ============================== */
-
-  useEffect(() => {
     setMenuOpen(false);
-    setShowDropdown(false);
+
   }, [location.pathname]);
-
-  /* =============================
-     Logout
-  ============================== */
-
-  const handleLogout = () => {
-    logout();
-
-    setMenuOpen(false);
-    setShowDropdown(false);
-
-    navigate("/");
-  };
-
-  /* =============================
-     Navbar Theme
-  ============================== */
-
-  const isTransparent =
-    location.pathname === "/" && !scrolled;
 
   return (
     <>
-      <header
-        className={`nav-header ${
-          isTransparent
-            ? "nav-header-transparent"
-            : "nav-header-scrolled"
-        }`}
-      >
+
+      <header className="nav-header">
+
         <div className="container nav-container">
 
           {/* Logo */}
@@ -124,13 +49,14 @@ function Navbar() {
           >
             <img
               src={logo}
-              alt="Infynex Logo"
+              alt="Infynex Global"
             />
           </NavLink>
 
           {/* Navigation */}
 
           <nav className="nav-links">
+
             <NavLink to="/">
               Home
             </NavLink>
@@ -159,55 +85,22 @@ function Navbar() {
               Contact
             </NavLink>
 
-            
           </nav>
 
-          {/* Right Side */}
+          {/* Desktop Button */}
 
           <div className="nav-actions">
 
             <NavLink
-              to="/employers"
+              to="/contact"
               className="nav-hire-btn"
             >
               Hire Talent
             </NavLink>
 
-            {!user ? (
-              <NavLink
-                to="/login"
-                className="nav-login-btn"
-              >
-                Login / Register
-              </NavLink>
-            ) : (
-              <div
-                className="nav-user-menu"
-                ref={dropdownRef}
-              >
-                <button
-                  className="nav-user-btn"
-                  onClick={() =>
-                    setShowDropdown(
-                      !showDropdown
-                    )
-                  }
-                  aria-label="User Menu"
-                >
-                  <FaCircleUser className="nav-user-icon" />
-                </button>
-
-                <ProfileDropdown
-                  user={user}
-                  showDropdown={showDropdown}
-                  handleLogout={handleLogout}
-                />
-              </div>
-            )}
-
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu */}
 
           <button
             className="nav-mobile-btn"
@@ -218,16 +111,16 @@ function Navbar() {
           </button>
 
         </div>
+
       </header>
 
-      {/* Mobile Menu */}
+      {/* Mobile Drawer */}
 
       <MobileMenu
         open={menuOpen}
         setOpen={setMenuOpen}
-        user={user}
-        handleLogout={handleLogout}
       />
+
     </>
   );
 }

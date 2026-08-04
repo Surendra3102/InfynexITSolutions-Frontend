@@ -1,141 +1,81 @@
 import "./Hero.css";
-import { Link } from "react-router-dom";
-import {
-  FaAngleDoubleRight,
-  FaArrowRight,
-  FaCode,
-  FaCloud,
-} from "react-icons/fa";
-import {
-  FiTrendingUp,
-  FiUsers,
-} from "react-icons/fi";
-import { HiOutlineBriefcase } from "react-icons/hi";
 
-import heroImage from "../../../assets/hero.png";
+import { Link } from "react-router-dom";
+import { FiArrowRight } from "react-icons/fi";
+
+import desktopHero from "../../../assets/hero-desktop.png";
+import mobileHero from "../../../assets/hero-mobile.png";
 
 function Hero() {
   return (
     <section className="hero">
 
-      <div className="container hero-container">
+      {/* Background Image */}
 
-        {/* ================= Left Side ================= */}
+      <picture className="hero-picture">
 
-        <div className="hero-left">
+        <source
+          media="(max-width:768px)"
+          srcSet={mobileHero}
+        />
+
+        <img
+          src={desktopHero}
+          alt="Infynex Global"
+          className="hero-image"
+        />
+
+      </picture>
+
+      {/* Gradient Overlay */}
+
+      <div className="hero-overlay"></div>
+
+      {/* Hero Content */}
+
+      <div className="container">
+
+        <div className="hero-content">
+
+          <span className="hero-tag">
+            Recruitment • Staffing • Technology
+          </span>
 
           <h1>
-            Empowering Businesses
+            Connecting Exceptional
             <br />
-            with <span>Talent & Technology</span>
+            <span>Talent</span> with
+            <br />
+            <span>Growing Businesses</span>
           </h1>
 
           <p>
-            Infynex Global IT Solutions Pvt. Ltd. helps businesses accelerate growth through world-class IT staffing and innovative software development services.
+            Helping businesses build high-performing teams through
+            recruitment, staffing, executive hiring, and technology
+            solutions tailored for sustainable business growth.
           </p>
 
           <div className="hero-buttons">
 
             <Link
-              to="/employers#employer-form"
-              className="primary-btn"
+              to="/employers"
+              className="hero-btn-primary"
             >
               Hire Talent
-              <FaArrowRight />
+
+              <FiArrowRight />
+
             </Link>
 
             <Link
-              to="/contact#contact-form"
-              className="secondary-btn"
+              to="/services"
+              className="hero-btn-secondary"
             >
-              Start Your Project
-              <FaAngleDoubleRight />
+              Explore Services
+
+              <FiArrowRight />
+
             </Link>
-
-          </div>
-
-          {/* Service Highlights */}
-
-          <div className="hero-features">
-
-            <div>
-              <HiOutlineBriefcase />
-              <span>IT Recruitment</span>
-            </div>
-
-            <div>
-              <FaCode />
-              <span>Software Development</span>
-            </div>
-
-            <div>
-              <FaCloud />
-              <span>Cloud Solutions</span>
-            </div>
-
-          </div>
-
-          <h3 className="trusted-title">
-            Trusted By
-          </h3>
-
-          <div className="hero-stats">
-
-            <div>
-              <h4>Startups</h4>
-            </div>
-
-            <div>
-              <h4>SMEs</h4>
-            </div>
-
-            <div>
-              <h4>Enterprises</h4>
-            </div>
-
-          </div>
-
-        </div>
-
-        {/* ================= Right Side ================= */}
-
-        <div className="hero-right">
-
-          <img
-            src={heroImage}
-            alt="Infynex Global IT Solutions"
-          />
-
-          {/* Floating Card 1 */}
-
-          <div className="floating-card top-card">
-
-            <FiTrendingUp />
-
-            <div>
-              <h4>100+</h4>
-              <span>Projects Delivered</span>
-            </div>
-
-          </div>
-
-          {/* Floating Card 2 */}
-
-          <div className="floating-card bottom-card">
-
-            <FiUsers />
-
-            <div>
-
-              <h4>Our Expertise</h4>
-
-              <span>✔ IT Staffing</span>
-
-              <span>✔ Software Development</span>
-
-              <span>✔ Cloud & AI Solutions</span>
-
-            </div>
 
           </div>
 

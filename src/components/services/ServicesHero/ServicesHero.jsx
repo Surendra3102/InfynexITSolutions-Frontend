@@ -20,7 +20,7 @@ function ServicesHero() {
 
           <h1 className="services-hero-title">
             IT Recruitment &
-            <span> Software Development</span>
+            <span> Software Development </span>
             Solutions
           </h1>
 

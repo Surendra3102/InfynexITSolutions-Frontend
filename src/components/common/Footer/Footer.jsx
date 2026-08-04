@@ -99,48 +99,7 @@ function Footer() {
 
           </div>
 
-          {/* Services */}
-
-          <div className="footer-links">
-
-            <h4>
-
-              Services
-
-            </h4>
-
-            <Link to="/services">
-
-              Permanent Recruitment
-
-            </Link>
-
-            <Link to="/services">
-
-              Contract Staffing
-
-            </Link>
-
-            <Link to="/services">
-
-              Executive Search
-
-            </Link>
-
-            <Link to="/services">
-
-              HR Outsourcing
-
-            </Link>
-
-            <Link to="/services">
-
-              RPO Services
-
-            </Link>
-
-          </div>
-
+          
           {/* Contact */}
 
           <div className="footer-contact">

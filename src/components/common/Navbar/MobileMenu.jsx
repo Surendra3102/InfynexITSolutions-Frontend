@@ -77,38 +77,6 @@ function MobileMenu({
             Hire Talent
           </NavLink>
 
-          {!user ? (
-            <NavLink
-              to="/login"
-              className="mobile-login-btn"
-              onClick={closeMenu}
-            >
-              Login / Register
-            </NavLink>
-          ) : (
-            <>
-              <div className="mobile-user-info">
-                <FaCircleUser />
-
-                <div>
-                  <strong>
-                    {user.full_name ||
-                      user.hr_name ||
-                      user.company_name}
-                  </strong>
-
-                  <small>{user.email}</small>
-                </div>
-              </div>
-
-              <button
-                className="mobile-logout-btn"
-                onClick={handleLogout}
-              >
-                Logout
-              </button>
-            </>
-          )}
         </div>
       </aside>
     </>
