@@ -17,18 +17,7 @@ const leaders = [
       "Governance",
     ],
   },
-  {
-    image: directorImg,
-    role: "Director - Talent Acquisition",
-    name: "Director Name",
-    description:
-      "Leading talent acquisition strategies by connecting exceptional professionals with organizations across diverse industries.",
-    tags: [
-      "Talent",
-      "Recruitment",
-      "Workforce",
-    ],
-  },
+  
   {
     image: ceoImg,
     role: "CEO & Founder",
@@ -39,6 +28,18 @@ const leaders = [
       "Innovation",
       "Growth",
       "Strategy",
+    ],
+  },
+  {
+    image: directorImg,
+    role: "Director - Talent Acquisition",
+    name: "Director Name",
+    description:
+      "Leading talent acquisition strategies by connecting exceptional professionals with organizations across diverse industries.",
+    tags: [
+      "Talent",
+      "Recruitment",
+      "Workforce",
     ],
   },
 ];
@@ -93,11 +94,7 @@ function Leadership() {
 
                 <div className="leader-overlay">
 
-                  <span>
-
-                    {leader.role}
-
-                  </span>
+                  
 
                 </div>
 
