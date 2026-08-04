@@ -28,7 +28,7 @@ function ContactCards() {
 
           <div className="contact-card-content">
             <span>Email Us</span>
-            <h3>info@infynex.com</h3>
+            <h3>info@infynexit.com</h3>
             <p>We'll reply within 24 hours</p>
           </div>
 
