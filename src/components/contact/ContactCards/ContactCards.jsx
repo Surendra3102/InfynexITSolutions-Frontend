@@ -14,8 +14,8 @@ function ContactCards() {
 
           <div className="contact-card-content">
             <span>Call Us</span>
-            <h3>+91 XXXXX XXXXX</h3>
-            <p>Mon – Sat | 9:00 AM – 6:00 PM</p>
+            <h3>+918008-933379</h3>
+            <p>Mon – FRI | 9:00 AM – 6:00 PM</p>
           </div>
 
         </div>
@@ -28,7 +28,7 @@ function ContactCards() {
 
           <div className="contact-card-content">
             <span>Email Us</span>
-            <h3>info@infynexit.com</h3>
+            <h3>hr@infynexit.com</h3>
             <p>We'll reply within 24 hours</p>
           </div>
 
@@ -42,7 +42,7 @@ function ContactCards() {
 
           <div className="contact-card-content">
             <span>Office</span>
-            <h3>Madhapur</h3>
+            <h3>HUDA Techno Enclave, Madhapur</h3>
             <p>Hyderabad, Telangana</p>
           </div>
 

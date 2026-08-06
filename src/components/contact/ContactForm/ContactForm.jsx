@@ -189,7 +189,7 @@ function ContactForm() {
             <FiPhone />
             <div>
               <h4>Phone</h4>
-              <span>+91 XXXXX XXXXX</span>
+              <span>+91 8008-933379</span>
             </div>
           </div>
 
@@ -205,7 +205,8 @@ function ContactForm() {
             <FiMapPin />
             <div>
               <h4>Office</h4>
-              <span>Madhapur, Hyderabad, Telangana</span>
+              <span>RAM SVR, Plot No 4/2, Sector 1, Madhapur, Huda Techno Enclave, </span>
+              <span>HITEC City, Hyderabad, Telangana</span>
             </div>
           </div>
 
@@ -213,7 +214,7 @@ function ContactForm() {
             <FiClock />
             <div>
               <h4>Working Hours</h4>
-              <span>Mon – Sat | 9:00 AM – 6:00 PM</span>
+              <span>Mon – Fri | 9:00 AM – 6:00 PM</span>
             </div>
           </div>
 

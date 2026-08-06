@@ -115,9 +115,8 @@ function Footer() {
               <FiMapPin />
 
               <span>
-
-                Madhapur,
-                Hyderabad
+                RAM SVR, Plot No 4/2, Sector 1, Madhapur, 
+                HUDA Techno Enclave, HITEC City, Hyderabad
 
               </span>
 
@@ -141,7 +140,7 @@ function Footer() {
 
               <span>
 
-                info@infynexit.com
+                hr@infynexit.com
 
               </span>
 

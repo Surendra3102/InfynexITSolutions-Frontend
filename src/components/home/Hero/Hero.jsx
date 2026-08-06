@@ -3,8 +3,9 @@ import "./Hero.css";
 import { Link } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
 
-import desktopHero from "../../../assets/hero-desktop.png";
-import mobileHero from "../../../assets/hero-mobile.png";
+import desktopHero from "../../../assets/about-hero.png";
+import mobileHero from "../../../assets/mobile-hero2.png";
+
 
 function Hero() {
   return (
