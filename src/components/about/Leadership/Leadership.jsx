@@ -59,10 +59,6 @@ function Leadership() {
                   alt={leader.name}
                   className="leader-image"
                 />
-
-                <div className="leader-overlay">
-                  <span>{leader.role}</span>
-                </div>
               </div>
 
               {/* Content */}
