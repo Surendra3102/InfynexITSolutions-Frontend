@@ -6,14 +6,13 @@ import { FiArrowRight } from "react-icons/fi";
 import desktopHero from "../../../assets/about-hero.png";
 import mobileHero from "../../../assets/mobile-hero2.png";
 
-
 function Hero() {
   return (
-    <section className="hero">
+    <section className="newhomebanner">
 
       {/* Background Image */}
 
-      <picture className="hero-picture">
+      <picture className="newhomebanner-picture">
 
         <source
           media="(max-width:768px)"
@@ -23,22 +22,22 @@ function Hero() {
         <img
           src={desktopHero}
           alt="Infynex Global"
-          className="hero-image"
+          className="newhomebanner-image"
         />
 
       </picture>
 
-      {/* Gradient Overlay */}
+      {/* Overlay */}
 
-      <div className="hero-overlay"></div>
+      <div className="newhomebanner-overlay"></div>
 
-      {/* Hero Content */}
+      {/* Content */}
 
-      <div className="container">
+      <div className="newhomebanner-container">
 
-        <div className="hero-content">
+        <div className="newhomebanner-content">
 
-          <span className="hero-tag">
+          <span className="newhomebanner-tag">
             Recruitment • Staffing • Technology
           </span>
 
@@ -56,26 +55,22 @@ function Hero() {
             solutions tailored for sustainable business growth.
           </p>
 
-          <div className="hero-buttons">
+          <div className="newhomebanner-buttons">
 
             <Link
               to="/employers"
-              className="hero-btn-primary"
+              className="newhomebanner-btn-primary"
             >
               Hire Talent
-
               <FiArrowRight />
-
             </Link>
 
             <Link
               to="/services"
-              className="hero-btn-secondary"
+              className="newhomebanner-btn-secondary"
             >
               Explore Services
-
               <FiArrowRight />
-
             </Link>
 
           </div>
