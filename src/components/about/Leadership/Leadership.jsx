@@ -8,7 +8,7 @@ const leaders = [
   {
     image: chairmanImg,
     role: "Chairman",
-    name: "Lokesh Reddy Molakala",
+    name: "Lokesh Reddy",
     description:
       "Providing strategic leadership and long-term vision while driving corporate excellence, strong governance, and sustainable business growth for Infynex.",
     tags: ["Vision", "Leadership", "Governance"],
@@ -24,7 +24,7 @@ const leaders = [
   {
     image: directorImg,
     role: "Director – Talent Acquisition",
-    name: "Venkatesh Prasad Naidu",
+    name: "Venkatesh Prasad",
     description:
       "Driving talent acquisition excellence by connecting exceptional professionals with leading organizations while building high-performing teams.",
     tags: ["Talent", "Recruitment", "Workforce"],
@@ -63,7 +63,7 @@ function Leadership() {
 
               {/* Content */}
               <div className="leader-content">
-                <span className="leader-badge">{leader.role}</span>
+                
 
                 <h3>{leader.name}</h3>
 
